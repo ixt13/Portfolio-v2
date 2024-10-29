@@ -1,13 +1,14 @@
+import { Footer } from '@/UI/Components/Footer/Footer'
+import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
+import './global.css'
+import styles from './layoutWrapper.module.css'
 
 export const metadata: Metadata = {
-	title: 'Portfolio',
+	title: 'Ceban Octavian',
 	description: 'Powered by Next',
 }
-export const globalStyles = {
-	padding: '0px',
-	margin: '0px',
-}
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -15,7 +16,30 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body style={globalStyles}>{children}</body>
+			<body>
+				<div className='area'>
+					<ul className='circles'>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div
+					className={styles.wrapper}
+					style={{ position: 'relative', zIndex: '1' }}
+				>
+					<Header />
+					{children}
+					<Footer />
+				</div>
+			</body>
 		</html>
 	)
 }
