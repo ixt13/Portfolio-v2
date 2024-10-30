@@ -9,13 +9,21 @@ export const metadata: Metadata = {
 	description: 'Powered by Next',
 }
 
+import { Bricolage_Grotesque } from 'next/font/google'
+
+// При загрузке вариативного шрифта, вес определять не нужно
+const inter = Bricolage_Grotesque({
+	subsets: ['latin'],
+	display: 'swap',
+})
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' className={inter.className}>
 			<body>
 				<div className='area'>
 					<ul className='circles'>

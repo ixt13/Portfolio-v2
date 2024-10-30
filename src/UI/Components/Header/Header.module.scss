@@ -19,3 +19,21 @@
 	height: 1px;
 	width: 80vw;
 }
+.navGroup {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	button {
+		position: absolute;
+		right: -100px;
+		height: 32px;
+		width: 32px;
+		cursor: pointer;
+		transition: all 0.1s linear;
+		transform: rotate(20deg);
+		&:hover {
+			transform: scale(1.2) rotate(0deg);
+		}
+	}
+}

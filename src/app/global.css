@@ -1,15 +1,20 @@
 :root {
 	--bg-color: darkslategrey;
+	--text-color: #e3e3e3;
 }
 
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	color: var(--text-color);
 }
 
 body {
 	background-color: var(--bg-color);
+}
+button {
+	all: unset;
 }
 
 .area {
