@@ -31,7 +31,7 @@ export const Header = () => {
 				>
 					<Image
 						src={currentTheme === 'dark' ? darkIcon : lightIcon}
-						alt='Landscape picture'
+						alt='Theme icon'
 						style={{ height: '100%', width: '100%' }}
 					/>
 				</button>
