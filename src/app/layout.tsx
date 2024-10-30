@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 import ClientProvider from '@/UI/Components/ClientProvider/ClientProvider'
 import { Bricolage_Grotesque } from 'next/font/google'
+import WrapperLayout from './WrapperLayout'
 
 // При загрузке вариативного шрифта, вес определять не нужно
 const inter = Bricolage_Grotesque({
@@ -39,16 +40,14 @@ export default function RootLayout({
 						<li></li>
 					</ul>
 				</div>
-				<div
-					className={styles.wrapper}
-					style={{ position: 'relative', zIndex: '1' }}
-				>
-					<ClientProvider>
+
+				<ClientProvider>
+					<WrapperLayout className={styles.wrapper}>
 						<Header />
 						{children}
 						<Footer />
-					</ClientProvider>
-				</div>
+					</WrapperLayout>
+				</ClientProvider>
 			</body>
 		</html>
 	)
