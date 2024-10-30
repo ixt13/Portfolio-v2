@@ -3,12 +3,12 @@ import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
 import './global.css'
 import styles from './layoutWrapper.module.css'
-
 export const metadata: Metadata = {
 	title: 'Ceban Octavian',
 	description: 'Powered by Next',
 }
 
+import ClientProvider from '@/UI/Components/ClientProvider/ClientProvider'
 import { Bricolage_Grotesque } from 'next/font/google'
 
 // При загрузке вариативного шрифта, вес определять не нужно
@@ -43,9 +43,11 @@ export default function RootLayout({
 					className={styles.wrapper}
 					style={{ position: 'relative', zIndex: '1' }}
 				>
-					<Header />
-					{children}
-					<Footer />
+					<ClientProvider>
+						<Header />
+						{children}
+						<Footer />
+					</ClientProvider>
 				</div>
 			</body>
 		</html>

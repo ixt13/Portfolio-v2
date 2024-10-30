@@ -1,12 +1,14 @@
 'use client'
 
-import { useTheme } from '@/functions/useTheme'
+import { useAppDispatch } from '@/redux/hooks'
+import { setThemeDark } from '@/redux/slicers/themeSlicer'
 import Image from 'next/image'
 import darkIcon from '../../../assets/images/Vector.png'
 import { NavButton } from '../NavButton/NavButton'
 import styles from './Header.module.scss'
 export const Header = () => {
-	const { toggleTheme, currentTheme } = useTheme()
+	const dispatch = useAppDispatch()
+	dispatch(setThemeDark())
 
 	return (
 		<header className={styles.header}>
@@ -17,12 +19,7 @@ export const Header = () => {
 					<NavButton href={'/portfolio'} textContent={'Portfolio'} />
 					<NavButton href={'/contacts'} textContent={'Contacts'} />
 				</nav>
-				<button
-					onClick={() => {
-						toggleTheme()
-						console.log(currentTheme)
-					}}
-				>
+				<button>
 					<Image
 						src={darkIcon}
 						alt='Landscape picture'
