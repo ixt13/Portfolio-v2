@@ -1,0 +1,35 @@
+.homeWrapper {
+	background-color: rgba(186, 186, 186, 0.1);
+	height: 100%;
+	width: 1540px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.aboutMeTextBlock {
+	height: 500px;
+	width: 624px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	h3 {
+		font-size: 28px;
+		font-weight: 300;
+	}
+}
+.aboutMeText {
+	font-size: 20px;
+	font-weight: 200;
+}
+.userContent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
