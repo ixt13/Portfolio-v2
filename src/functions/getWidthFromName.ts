@@ -20,6 +20,9 @@ export const getWidthFromName = (value: string): number | undefined => {
 	if (value === 'node') {
 		return 38
 	}
+	if (value === 'react') {
+		return 46
+	}
 
 	return 40
 }

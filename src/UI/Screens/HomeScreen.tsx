@@ -10,20 +10,15 @@ export const HomeScreen = () => {
 					<p className={styles.aboutMeText}>{abotMeTextContent}</p>
 				</div>
 				<div
-					style={{ width: '340px', height: '500px', border: '2px solid black' }}
+					style={{ width: '280px', height: '400px', border: '2px solid black' }}
 				></div>
 			</div>
-			<div
-				style={{
-					width: '1100px',
-					height: '80px',
-					border: '2px solid black',
-					display: 'flex',
-				}}
-			>
-				{technologies.map((el, index) => (
-					<TechItem key={index} name={el.name} image={el.image} />
-				))}
+			<div className={styles.carousel}>
+				<div className={styles.technologiesStackBox}>
+					{technologies.map((el, index) => (
+						<TechItem key={index} name={el.name} image={el.image} />
+					))}
+				</div>
 			</div>
 		</main>
 	)
