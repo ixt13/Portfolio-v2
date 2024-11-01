@@ -73,6 +73,10 @@ export const technologies: iTechnologies[] = [
 		image: tanstackImage,
 	},
 	{
+		name: 'vite',
+		image: viteImage,
+	},
+	{
 		name: 'express',
 		image: expressImage,
 	},
