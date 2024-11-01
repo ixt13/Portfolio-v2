@@ -38,6 +38,9 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 				reverseDirection: reverseDirection,
 			}}
 			speed={3500}
+			simulateTouch={false} // Отключает перетаскивание
+			allowTouchMove={false} // Отключает возможность перемещения слайдов
+			preventInteractionOnTransition={true}
 		>
 			{shuffledTechnologies.map((el, index) => (
 				<SwiperSlide key={index} style={{ width: 'auto', height: '32px' }}>
