@@ -1,31 +1,35 @@
 'use client'
 
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Swiper } from 'swiper/react'
-
+import { technologies } from '@/consts'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import { Autoplay } from 'swiper/modules'
+import { TechItem } from '../TechItem/TechItem'
+import './Carousel.css'
 
-export const Carousel = ({
-	children,
-}: Readonly<{
-	children: React.ReactNode
-}>) => {
+export const Carousel = () => {
 	return (
 		<Swiper
-			modules={[Navigation, Pagination, Scrollbar, A11y]}
-			spaceBetween={50}
-			slidesPerView={3}
-			navigation
-			pagination={{ clickable: true }}
-			scrollbar={{ draggable: true }}
-			onSwiper={swiper => console.log(swiper)}
-			onSlideChange={() => console.log('slide change')}
+			modules={[Autoplay]}
+			spaceBetween={10}
+			slidesPerView={7}
+			loop={true}
+			autoplay={{
+				delay: 2000,
+				disableOnInteraction: false,
+			}}
 		>
-			{children}
+			<div>
+				{technologies.map((el, index) => (
+					<SwiperSlide key={index}>
+						<TechItem name={el.name} image={el.image} />
+					</SwiperSlide>
+				))}
+			</div>
 		</Swiper>
 	)
 }

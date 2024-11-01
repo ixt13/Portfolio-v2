@@ -6,5 +6,5 @@ export const SwiperSlideProvider = ({
 }: Readonly<{
 	children: React.ReactNode
 }>) => {
-	return <SwiperSlide>{children}</SwiperSlide>
+	return <SwiperSlide style={{ height: '40px' }}>{children}</SwiperSlide>
 }

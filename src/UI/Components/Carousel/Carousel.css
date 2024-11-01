@@ -1,0 +1,6 @@
+.swiper {
+	position: relative;
+	height: 40px;
+	width: 1000px;
+	display: flex;
+}

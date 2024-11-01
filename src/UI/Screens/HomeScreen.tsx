@@ -1,7 +1,5 @@
-import { abotMeTextContent, technologies } from '@/consts'
+import { abotMeTextContent } from '@/consts'
 import { Carousel } from '../Components/Carousel/Carousel'
-import { TechItem } from '../Components/TechItem/TechItem'
-import { SwiperSlideProvider } from '../Providers/SwiperSlideProvider/SwiperSlideProvider'
 import styles from './HomeScreen.module.scss'
 export const HomeScreen = () => {
 	return (
@@ -15,22 +13,17 @@ export const HomeScreen = () => {
 					style={{ width: '280px', height: '400px', border: '2px solid black' }}
 				></div>
 			</div>
-			<Carousel>
-				{technologies.map((el, index) => (
-					<SwiperSlideProvider key={index}>
-						<TechItem name={el.name} image={el.image} />
-					</SwiperSlideProvider>
-				))}
-			</Carousel>
-			{/* <div className={styles.carousel}>
-				<div className={styles.technologiesStackBox}>
-					{technologies.map((el, index) => (
-						<SwiperSlideProvider key={index}>
-							<TechItem name={el.name} image={el.image} />
-						</SwiperSlideProvider>
-					))}
-				</div>
-			</div> */}
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center',
+					flexDirection: 'column',
+					gap: '18px',
+				}}
+			>
+				<h3>Stack</h3>
+				<Carousel />
+			</div>
 		</main>
 	)
 }

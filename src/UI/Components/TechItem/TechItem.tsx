@@ -1,3 +1,5 @@
+'use client'
+
 import { iTechnologies } from '@/consts'
 import { getWidthFromName } from '@/functions/getWidthFromName'
 import Image from 'next/image'
