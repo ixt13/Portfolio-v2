@@ -12,7 +12,7 @@ export const getWidthFromName = (value: string): number | undefined => {
 		return 22
 	}
 	if (value === 'mongoose') {
-		return 50
+		return 70
 	}
 	if (value === 'express') {
 		return 50
