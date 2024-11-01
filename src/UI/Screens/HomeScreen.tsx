@@ -13,8 +13,10 @@ export const HomeScreen = () => {
 					style={{ width: '280px', height: '400px', border: '2px solid black' }}
 				></div>
 			</div>
-
-			<Carousel />
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+				<Carousel reverseDirection={true} />
+				<Carousel reverseDirection={false} />
+			</div>
 		</main>
 	)
 }

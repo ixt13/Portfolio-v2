@@ -3,6 +3,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { technologies } from '@/consts'
+import { shuffleArray } from '@/functions/shuffleArray'
+import { FC } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -10,28 +12,29 @@ import 'swiper/css/scrollbar'
 import { Autoplay } from 'swiper/modules'
 import { TechItem } from '../TechItem/TechItem'
 import './Carousel.css'
-
-export const Carousel = () => {
+interface iCarousel {
+	reverseDirection: boolean
+}
+export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 	return (
 		<Swiper
 			modules={[Autoplay]}
 			spaceBetween={10}
-			slidesPerView={7}
-			slidesPerGroup={3}
+			slidesPerView={'auto'}
+			slidesPerGroup={1}
 			loop={true}
 			autoplay={{
 				delay: 3000,
 				disableOnInteraction: false,
+				reverseDirection: reverseDirection,
 			}}
-			speed={5000}
+			speed={3500}
 		>
-			<div>
-				{technologies.map((el, index) => (
-					<SwiperSlide key={index}>
-						<TechItem name={el.name} image={el.image} />
-					</SwiperSlide>
-				))}
-			</div>
+			{shuffleArray(technologies).map((el, index) => (
+				<SwiperSlide key={index} style={{ width: 'auto', height: '50px' }}>
+					<TechItem name={el.name} image={el.image} />
+				</SwiperSlide>
+			))}
 		</Swiper>
 	)
 }
