@@ -80,4 +80,8 @@ export const technologies: iTechnologies[] = [
 		name: 'node.js',
 		image: nodeImage,
 	},
+	{
+		name: 'tanstack',
+		image: tanstackImage,
+	},
 ]

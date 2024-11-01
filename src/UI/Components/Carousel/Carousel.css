@@ -4,3 +4,7 @@
 	width: 1000px;
 	display: flex;
 }
+
+.swiper:hover {
+	cursor: grab;
+}

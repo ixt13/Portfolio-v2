@@ -17,11 +17,13 @@ export const Carousel = () => {
 			modules={[Autoplay]}
 			spaceBetween={10}
 			slidesPerView={7}
+			slidesPerGroup={3}
 			loop={true}
 			autoplay={{
-				delay: 2000,
+				delay: 3000,
 				disableOnInteraction: false,
 			}}
+			speed={5000}
 		>
 			<div>
 				{technologies.map((el, index) => (
