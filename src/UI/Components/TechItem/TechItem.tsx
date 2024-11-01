@@ -3,13 +3,10 @@ import { getWidthFromName } from '@/functions/getWidthFromName'
 import Image from 'next/image'
 import { FC } from 'react'
 import styles from './TechItem.module.scss'
-interface iTechItem extends iTechnologies {
-	key: number
-}
 
-export const TechItem: FC<iTechItem> = ({ name, image, key }) => {
+export const TechItem: FC<iTechnologies> = ({ name, image }) => {
 	return (
-		<div className={styles.item} key={key}>
+		<div className={styles.item}>
 			<p>{name}</p>
 			<Image
 				src={image}
