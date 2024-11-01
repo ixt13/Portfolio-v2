@@ -2,9 +2,9 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { technologies } from '@/consts'
+import { iTechnologies, technologies } from '@/consts'
 import { shuffleArray } from '@/functions/shuffleArray'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -16,6 +16,14 @@ interface iCarousel {
 	reverseDirection: boolean
 }
 export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
+	const [shuffledTechnologies, setShuffledTechnologies] = useState<
+		iTechnologies[]
+	>([])
+
+	useEffect(() => {
+		setShuffledTechnologies(shuffleArray(technologies))
+	}, [])
+
 	return (
 		<Swiper
 			modules={[Autoplay]}
@@ -30,8 +38,8 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 			}}
 			speed={3500}
 		>
-			{shuffleArray(technologies).map((el, index) => (
-				<SwiperSlide key={index} style={{ width: 'auto', height: '100%' }}>
+			{shuffledTechnologies.map((el, index) => (
+				<SwiperSlide key={index} style={{ width: 'auto', height: '32px' }}>
 					<TechItem name={el.name} image={el.image} />
 				</SwiperSlide>
 			))}
