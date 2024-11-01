@@ -1,5 +1,6 @@
 import { iTechnologies } from '@/consts'
 
 export const shuffleArray = (array: iTechnologies[]) => {
-	return array.sort(() => Math.random() - 0.5)
+	const newArray = [...array]
+	return newArray.sort(() => Math.random() - 0.5)
 }

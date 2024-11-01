@@ -24,6 +24,7 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 		setShuffledTechnologies(shuffleArray(technologies))
 	}, [])
 
+	console.log(shuffledTechnologies)
 	return (
 		<Swiper
 			modules={[Autoplay]}
