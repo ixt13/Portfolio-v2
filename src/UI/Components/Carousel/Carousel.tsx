@@ -24,7 +24,6 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 		setShuffledTechnologies(shuffleArray(technologies))
 	}, [])
 
-	console.log(shuffledTechnologies)
 	return (
 		<Swiper
 			modules={[Autoplay]}
@@ -38,8 +37,8 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 				reverseDirection: reverseDirection,
 			}}
 			speed={3500}
-			simulateTouch={false} // Отключает перетаскивание
-			allowTouchMove={false} // Отключает возможность перемещения слайдов
+			simulateTouch={false}
+			allowTouchMove={false}
 			preventInteractionOnTransition={true}
 		>
 			{shuffledTechnologies.map((el, index) => (

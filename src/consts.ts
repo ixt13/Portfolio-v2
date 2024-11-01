@@ -73,15 +73,15 @@ export const technologies: iTechnologies[] = [
 		image: tanstackImage,
 	},
 	{
-		name: 'vite',
-		image: viteImage,
-	},
-	{
 		name: 'express',
 		image: expressImage,
 	},
 	{
 		name: 'node.js',
 		image: nodeImage,
+	},
+	{
+		name: 'vite',
+		image: viteImage,
 	},
 ]
