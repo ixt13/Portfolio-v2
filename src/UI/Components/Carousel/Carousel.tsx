@@ -31,7 +31,7 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 			speed={3500}
 		>
 			{shuffleArray(technologies).map((el, index) => (
-				<SwiperSlide key={index} style={{ width: 'auto', height: '50px' }}>
+				<SwiperSlide key={index} style={{ width: 'auto', height: '100%' }}>
 					<TechItem name={el.name} image={el.image} />
 				</SwiperSlide>
 			))}

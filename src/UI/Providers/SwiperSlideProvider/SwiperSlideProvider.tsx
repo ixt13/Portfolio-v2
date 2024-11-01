@@ -3,8 +3,10 @@ import { SwiperSlide } from 'swiper/react'
 
 export const SwiperSlideProvider = ({
 	children,
+	style,
 }: Readonly<{
 	children: React.ReactNode
+	style: object
 }>) => {
-	return <SwiperSlide style={{ height: '40px' }}>{children}</SwiperSlide>
+	return <SwiperSlide style={style}>{children}</SwiperSlide>
 }

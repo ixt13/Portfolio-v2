@@ -12,7 +12,7 @@ export const TechItem: FC<iTechnologies> = ({ name, image }) => {
 			<p>{name}</p>
 			<Image
 				src={image}
-				height={name === 'express' ? 28 : 40}
+				height={name === 'express' ? 16 : 24}
 				width={getWidthFromName(name)}
 				alt={name}
 			/>
