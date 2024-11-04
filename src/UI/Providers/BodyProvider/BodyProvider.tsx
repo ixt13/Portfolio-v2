@@ -31,7 +31,7 @@ export const BodyProvider = ({
 						display: 'flex',
 						flexDirection: 'column',
 						alignItems: 'center',
-						justifyContent: 'center',
+						justifyContent: 'space-between',
 					}}
 				>
 					{children}

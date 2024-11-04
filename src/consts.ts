@@ -14,7 +14,7 @@ import tsImage from '@/assets/images/ts.png'
 import viteImage from '@/assets/images/vite.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 export const abotMeTextContent = `Hi there! I’m  Ceban Octavian, born April 27, '97 a passionate web developer with two years of experience in creating beautiful and functional websites. \n  
-My journey in web development began in 2022 when I started learning the basics of HTML, CSS, and JavaScript. Since then, I’ve delved into more complex frameworks and technologies, such as React.js and various libraries, including TanStack , Axios and another. I also develop basic APIs for working with MongoDB using Node.js, Express, and Mongoose.\n 
+My journey in web development began in 2022 when I started learning the basics of HTML, CSS, and JavaScript. Since then, I’ve delved into more complex frameworks and technologies, such as React.js, Next.js and various libraries, including TanStack , Axios and another. I also develop basic APIs for working with MongoDB using Node.js, Express, and Mongoose.\n 
  For me, every project is not just a task, but an opportunity to express my creativity and solve real user problems. I strive to create intuitive interfaces and optimized server solutions to ensure that every website is not only visually appealing but also effective.\n        
 I love exploring new technologies and applying them to my projects to stay in tune with modern web development trends. My goal is not just to build websites, but to create  user experiences.`
 
