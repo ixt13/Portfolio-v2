@@ -11,7 +11,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import { Autoplay } from 'swiper/modules'
 import { TechItem } from '../TechItem/TechItem'
-import './Carousel.css'
+
+import styles from './Carousel.module.scss'
 interface iCarousel {
 	reverseDirection: boolean
 }
@@ -26,6 +27,7 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 
 	return (
 		<Swiper
+			className={styles.swiper}
 			modules={[Autoplay]}
 			spaceBetween={10}
 			slidesPerView={'auto'}
@@ -42,7 +44,7 @@ export const Carousel: FC<iCarousel> = ({ reverseDirection }) => {
 			preventInteractionOnTransition={true}
 		>
 			{shuffledTechnologies.map((el, index) => (
-				<SwiperSlide key={index} style={{ width: 'auto', height: '32px' }}>
+				<SwiperSlide className={styles.slide} key={index}>
 					<TechItem name={el.name} image={el.image} />
 				</SwiperSlide>
 			))}
