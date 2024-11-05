@@ -29,15 +29,16 @@ export const ResumeScreen = () => {
 				<div className={styles.tree}>
 					<ul>
 						<li>
-							{`Orange Store, B2C Sales Administrator/Consultant 2018-2021\n
+							{`Orange Store, B2C Sales Administrator/Consultant 2018-2021 
 							Responsibilities - Consultation on IT, GSM products, and Orange
 							services, motivate and assessed subordinates knowledge within the
 							store, maintained and arranged products according to standards.`}
 						</li>
 						<li>
 							{`Dita Estfarm, PC Operator (1C , Emails, MsOffice) 2021-11.2024\n
-							Responsibilities - Operated using the 1C program, invoiced,
-							maintained records, and dispensed medications to legal entities.`}
+							`}
+							<p>{`Responsibilities - Operated using the 1C program, invoiced,
+							maintained records, and dispensed medications to legal entities.`}</p>
 						</li>
 					</ul>
 				</div>
@@ -46,8 +47,7 @@ export const ResumeScreen = () => {
 				<ul>
 					<li>{`HTML , CSS/SCSS, JavaScript - basic knowledge`}</li>
 					<li>
-						{`React.js with ReduxToolkit, React Query, React Router and other
-						modules - entry level+ knowledge`}
+						{`React.js with ReduxToolkit, React Query, React Router and other modules - entry level+ knowledge`}
 					</li>
 					<li>{`Node.JS , Express.js, MongoDB - entry level knowledge`}</li>
 				</ul>
