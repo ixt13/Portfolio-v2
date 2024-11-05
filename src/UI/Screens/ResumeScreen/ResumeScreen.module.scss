@@ -2,7 +2,9 @@
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	height: 100%;
 	width: 50%;
+	justify-content: space-between;
 }
 
 .secondGroup {
@@ -23,27 +25,46 @@
 	font-size: 18px;
 	font-weight: 200;
 	justify-content: center;
+	white-space: pre-line;
+
+	ul {
+		list-style: none;
+	}
+
+	li::before {
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url('../../../assets/images/nextArrow.svg');
+		background-size: contain;
+		margin-right: 10px;
+		text-align: center;
+	}
 }
 
 .one {
 	width: auto;
-	height: auto;
+	height: 100%;
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 40px;
+	border-radius: 8px;
 }
 
 .two {
 	width: auto;
-	height: auto;
+	height: 100%;
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 40px;
+	border-radius: 8px;
 }
 
 .tree {
 	width: 50%;
-	height: auto;
+	height: 100%;
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 40px;
+	border-radius: 8px;
 }
 
 .four {
@@ -51,4 +72,5 @@
 	height: auto;
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 40px;
+	border-radius: 8px;
 }
