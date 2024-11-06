@@ -159,11 +159,12 @@ export const devSkills: iTextContent = {
 		},
 		{
 			paragraph:
-				'React.js with ReduxToolkit, React Query, React Router and other modules , Next.js - basic knowledge',
+				'React.js with ReduxToolkit, Tanstack Query/Router, React Router and other modules , Next.js - basic knowledge',
 			description: '',
 		},
 		{
-			paragraph: 'Node.JS , Express.js, MongoDB - basic knowledge',
+			paragraph:
+				'Node.JS , Express.js, MongoDB and other libraries  - basic knowledge',
 			description: '',
 		},
 	],
