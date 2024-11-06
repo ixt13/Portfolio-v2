@@ -100,8 +100,8 @@ export const studies: iTextContent = {
 	textContent: [
 		{
 			paragraph:
-				'College of Microelectronics and Computerized Engineering 2013-2017',
-			description: 'Speciality - Telecommunication',
+				'College of Microelectronics and Computerized Engineering 2013-2017 - Telecommunication',
+			description: '',
 		},
 		{
 			paragraph:
@@ -115,7 +115,11 @@ export const languages: iTextContent = {
 	title: 'Languages',
 	textContent: [
 		{
-			paragraph: 'English - Elementary A2 Proficiency',
+			paragraph: 'Deutch - A1 Proficiency',
+			description: '',
+		},
+		{
+			paragraph: 'English -  A2 Proficiency',
 			description: '',
 		},
 		{
