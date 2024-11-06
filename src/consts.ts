@@ -85,3 +85,82 @@ export const technologies: iTechnologies[] = [
 		image: viteImage,
 	},
 ]
+
+export interface iParagraph {
+	paragraph: string
+	description: string
+}
+
+export interface iTextContent {
+	title: string
+	textContent: iParagraph[]
+}
+export const studies: iTextContent = {
+	title: 'Studies',
+	textContent: [
+		{
+			paragraph:
+				'College of Microelectronics and Computerized Engineering 2013-2017',
+			description: 'Speciality - Telecommunication',
+		},
+		{
+			paragraph:
+				'Web Development in Online School - SkyPro, 2022-2023 (12 month)',
+			description: 'Technologies - HTML, CSS, JavaScript, React.js',
+		},
+	],
+}
+
+export const languages: iTextContent = {
+	title: 'Languages',
+	textContent: [
+		{
+			paragraph: 'English - Elementary A2 Proficiency',
+			description: '',
+		},
+		{
+			paragraph: 'Russian - Bilingual Proficiency',
+			description: '',
+		},
+		{
+			paragraph: 'Romanian - Native Proficiency',
+			description: '',
+		},
+	],
+}
+
+export const workExperience: iTextContent = {
+	title: 'Work Experience',
+	textContent: [
+		{
+			paragraph: 'Orange Store, B2C Sales Administrator/Consultant 2018-2021',
+			description:
+				'Responsibilities - Consultation on IT, GSM products, and Orange services, motivate and assessed subordinates knowledge within the store, maintained and arranged products according to standards.',
+		},
+		{
+			paragraph:
+				'Dita Estfarm, PC Operator (1C , Emails, MsOffice) 2021-11.2024',
+			description:
+				'Responsibilities - Operated using the 1C program, invoiced, maintained records, and dispensed medications to legal entities.',
+		},
+	],
+}
+
+export const devSkills: iTextContent = {
+	title: 'Web Development Skills',
+	textContent: [
+		{
+			paragraph: 'HTML , CSS/SCSS, JavaScript - basic knowledge',
+			description: '',
+		},
+		{
+			paragraph:
+				'React.js with ReduxToolkit, React Query, React Router and other modules , Next.js - basic knowledge',
+			description: '',
+		},
+		{
+			paragraph: 'Node.JS , Express.js, MongoDB - basic knowledge',
+			description: '',
+		},
+	],
+}
