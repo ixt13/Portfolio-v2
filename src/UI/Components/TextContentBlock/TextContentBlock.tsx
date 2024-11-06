@@ -19,12 +19,12 @@ export const TextContentBlock: FC<iTextContentBlock> = ({
 
 			<ul>
 				{textContent?.textContent.map((el, index) => (
-					<div className={styles.container} key={index}>
-						<SquareIcon className={styles.squareIcon} />
-						<div>
+					<div key={index}>
+						<div className={styles.container}>
+							<SquareIcon className={styles.squareIcon} />
 							<li>{el.paragraph}</li>
-							{el.description.length > 0 ? <p>{el.description}</p> : ''}
 						</div>
+						{el.description.length > 0 ? <p>{el.description}</p> : ''}
 					</div>
 				))}
 			</ul>
