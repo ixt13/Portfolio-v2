@@ -1,4 +1,5 @@
 import { iTextContent } from '@/consts'
+import { SquareIcon } from '@/UI/IconComponents/SquareIcon/SquareIcon'
 import { FC } from 'react'
 import styles from './TextContentBlock.module.scss'
 interface iTextContentBlock {
@@ -18,9 +19,12 @@ export const TextContentBlock: FC<iTextContentBlock> = ({
 
 			<ul>
 				{textContent?.textContent.map((el, index) => (
-					<div key={index}>
-						<li>{el.paragraph}</li>
-						{el.description.length > 0 ? <p>{el.description}</p> : ''}
+					<div className={styles.container} key={index}>
+						<SquareIcon className={styles.squareIcon} />
+						<div>
+							<li>{el.paragraph}</li>
+							{el.description.length > 0 ? <p>{el.description}</p> : ''}
+						</div>
 					</div>
 				))}
 			</ul>

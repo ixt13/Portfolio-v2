@@ -13,11 +13,12 @@ export const BodyProvider = ({
 	return (
 		<html lang='en'>
 			<body
+				cz-shortcut-listen='true'
 				className={className}
 				style={{
 					...style,
 					position: 'relative',
-					width: '100vw',
+					width: '100%',
 					height: '100vh',
 				}}
 			>
