@@ -2,6 +2,7 @@
 	background-color: rgba(217, 217, 217, 0.2);
 	display: flex;
 	flex-direction: column;
+	border-radius: 8px;
 
 	ul {
 		list-style: none;
@@ -27,21 +28,6 @@
 			filter: invert(90%) sepia(0%) saturate(0%) hue-rotate(0deg);
 		}
 	}
-
-	p {
-		margin-top: 6px;
-		// &::before {
-		// 	content: '';
-		// 	display: inline-block;
-		// 	width: 14px;
-		// 	height: 14px;
-		// 	background: url('../../../assets/images/nextArrow.svg');
-		// 	background-size: contain;
-		// 	margin-right: 10px;
-		// 	text-align: center;
-		// 	vertical-align: middle;
-		// }
-	}
 }
 
 .title {
@@ -51,7 +37,7 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	padding-top: 12px;
+	padding-top: 16px;
 
 	h4 {
 		display: flex;
