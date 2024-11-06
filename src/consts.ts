@@ -154,17 +154,17 @@ export const devSkills: iTextContent = {
 	title: 'Web Development Skills',
 	textContent: [
 		{
-			paragraph: 'HTML , CSS/SCSS, JavaScript - basic knowledge',
+			paragraph: 'HTML, CSS/SCSS, JavaScript, TypeScript - basic knowledge',
 			description: '',
 		},
 		{
 			paragraph:
-				'React.js with ReduxToolkit, Tanstack Query/Router, React Router and other modules , Next.js - basic knowledge',
+				'React.js with ReduxToolkit, Tanstack Query/Router, React Router and other modules, Next.js - basic knowledge',
 			description: '',
 		},
 		{
 			paragraph:
-				'Node.JS , Express.js, MongoDB and other libraries  - basic knowledge',
+				'Node.JS, Express.js, MongoDB and other libraries  - basic knowledge',
 			description: '',
 		},
 	],
