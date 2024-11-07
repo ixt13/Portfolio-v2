@@ -115,7 +115,7 @@ export const languages: iTextContent = {
 	title: 'Languages',
 	textContent: [
 		{
-			paragraph: 'Deutch - A1 Proficiency',
+			paragraph: 'Deutsch - A1 Proficiency',
 			description: '',
 		},
 		{
