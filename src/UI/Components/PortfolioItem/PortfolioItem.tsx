@@ -1,10 +1,22 @@
 'use client'
 
-import tgImage from '@/assets/images/TelegramImage.jpg'
 import Image from 'next/image'
-import { useState } from 'react'
+
+import { iportfolioPageProjects } from '@/consts'
+import { FC, useState } from 'react'
 import styles from './PortfolioItem.module.scss'
-export const PortfolioItem = () => {
+
+interface iPortfolioItem extends iportfolioPageProjects {
+	key?: number
+	className?: string
+}
+
+export const PortfolioItem: FC<iPortfolioItem> = ({
+	key,
+	image,
+	descriprion,
+	usedTechnologiesIcons,
+}) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
 	const handleHover = () => {
@@ -12,6 +24,7 @@ export const PortfolioItem = () => {
 	}
 	return (
 		<div
+			key={key}
 			onMouseEnter={() => {
 				handleHover()
 			}}
@@ -23,13 +36,26 @@ export const PortfolioItem = () => {
 					showHoverMenu ? styles.photoContainerHover : styles.photoContainer
 				}
 			>
-				<Image src={tgImage} alt='pageImage' />
+				<Image src={image} alt='projectImage' />
 			</div>
-			<div
-				className={
-					showHoverMenu ? styles.hoverContainer : styles.hoverContainerHover
-				}
-			></div>
+			<div className={showHoverMenu ? styles.itemInfoonHover : styles.itemInfo}>
+				<p className={styles.itemDescription}>{descriprion}</p>
+				<div>
+					{usedTechnologiesIcons.map((el, index) => (
+						<div className={styles.itemUsedTechnologies} key={index}>
+							{Object.entries(el).map(([techName, techIcon]) => (
+								<Image
+									key={techName}
+									src={techIcon}
+									alt={`${techName}Icon`}
+									height={34}
+									width={techName === 'css' || techName === 'mongodb' ? 24 : 34}
+								/>
+							))}
+						</div>
+					))}
+				</div>
+			</div>
 		</div>
 	)
 }

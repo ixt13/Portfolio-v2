@@ -1,18 +1,106 @@
 import axiosImage from '@/assets/images/axios.png'
+import cardGameImage from '@/assets/images/cardGame.jpg'
 import cssImage from '@/assets/images/css.png'
 import expressImage from '@/assets/images/express.png'
 import htmlImage from '@/assets/images/html.png'
 import jsImage from '@/assets/images/js.png'
+import marketImage from '@/assets/images/market.jpg'
 import mongoImage from '@/assets/images/mongo.png'
 import mongooseImage from '@/assets/images/mongoose.png'
+import musicAppImage from '@/assets/images/musicAppImage.jpg'
+import nextImage from '@/assets/images/next.png'
 import nodeImage from '@/assets/images/node.png'
+import portfolioImage from '@/assets/images/portfolio.png'
 import reactImage from '@/assets/images/react.png'
 import reduxImage from '@/assets/images/redux.png'
 import scssImage from '@/assets/images/scss.png'
 import tanstackImage from '@/assets/images/tanstack.png'
+import tgAppImage from '@/assets/images/TelegramImage.jpg'
 import tsImage from '@/assets/images/ts.png'
 import viteImage from '@/assets/images/vite.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+
+interface iUsedTechnologiesIcons {
+	react?: StaticImport
+	vite?: StaticImport
+	redux?: StaticImport
+	tanstack?: StaticImport
+	node?: StaticImport
+	express?: StaticImport
+	mongodb?: StaticImport
+	javaScript?: StaticImport
+	css?: StaticImport
+	next?: StaticImport
+}
+
+export interface iportfolioPageProjects {
+	image: StaticImport
+	descriprion: string
+	usedTechnologiesIcons: iUsedTechnologiesIcons[]
+}
+
+export const portfolioPageProjects: iportfolioPageProjects[] = [
+	{
+		image: tgAppImage,
+		descriprion: 'a powerfull app',
+		usedTechnologiesIcons: [
+			{
+				react: reactImage,
+				vite: viteImage,
+				redux: reduxImage,
+				tanstack: tanstackImage,
+				node: nodeImage,
+				express: expressImage,
+				mongodb: mongoImage,
+			},
+		],
+	},
+
+	{
+		image: musicAppImage,
+		descriprion: 'a powerfull app',
+		usedTechnologiesIcons: [
+			{
+				react: reactImage,
+
+				redux: reduxImage,
+				tanstack: tanstackImage,
+			},
+		],
+	},
+	{
+		image: marketImage,
+		descriprion: 'a powerfull app',
+		usedTechnologiesIcons: [
+			{
+				react: reactImage,
+
+				redux: reduxImage,
+				tanstack: tanstackImage,
+			},
+		],
+	},
+	{
+		image: cardGameImage,
+		descriprion: 'a powerfull app',
+		usedTechnologiesIcons: [
+			{
+				javaScript: jsImage,
+				css: cssImage,
+			},
+		],
+	},
+	{
+		image: portfolioImage,
+		descriprion: 'a powerfull app',
+		usedTechnologiesIcons: [
+			{
+				next: nextImage,
+			},
+		],
+	},
+]
+
 export const abotMeTextContent = `Hi there! I’m  Ceban Octavian, born April 27, '97 a passionate web developer with two years of experience in creating beautiful and functional websites. \n  
 My journey in web development began in 2022 when I started learning the basics of HTML, CSS, and JavaScript. Since then, I’ve delved into more complex frameworks and technologies, such as React.js, Next.js and various libraries, including TanStack , Axios and another. I also develop basic APIs for working with MongoDB using Node.js, Express, and Mongoose.\n 
  For me, every project is not just a task, but an opportunity to express my creativity and solve real user problems. I strive to create intuitive interfaces and optimized server solutions to ensure that every website is not only visually appealing but also effective.\n        
@@ -83,6 +171,10 @@ export const technologies: iTechnologies[] = [
 	{
 		name: 'vite',
 		image: viteImage,
+	},
+	{
+		name: 'Next.js',
+		image: nextImage,
 	},
 ]
 

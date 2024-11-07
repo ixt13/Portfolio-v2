@@ -6,12 +6,7 @@ interface iSquareIcon {
 
 export const SquareIcon: FC<iSquareIcon> = ({ className }) => {
 	return (
-		<svg
-			viewBox='0 0 24 24'
-			fill='none'
-			xmlns='http://www.w3.org/2000/svg'
-			className={className}
-		>
+		<svg viewBox='0 0 24 24' fill='none' className={className}>
 			<path
 				d='M10.5 9L13.5 12L10.5 15'
 				stroke='currentColor'
