@@ -85,6 +85,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 
 				redux: reduxImage,
 				tanstack: tanstackImage,
+				node: nodeImage,
+				mongodb: mongoImage,
 			},
 		],
 		isLive: false,

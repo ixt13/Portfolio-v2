@@ -39,7 +39,7 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 					showHoverMenu ? styles.photoContainerHover : styles.photoContainer
 				}
 			>
-				<Image src={image} alt='projectImage' />
+				<Image src={image} alt='projectImage' priority={true} />
 				<div
 					className={
 						showHoverMenu ? styles.linksContainerOnHover : styles.linksContainer
