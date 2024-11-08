@@ -37,28 +37,34 @@ export interface iportfolioPageProjects {
 	image: StaticImport
 	descriprion: string
 	usedTechnologiesIcons: iUsedTechnologiesIcons[]
+	isLive: boolean
+	isGithub: boolean
 }
 
 export const portfolioPageProjects: iportfolioPageProjects[] = [
 	{
 		image: tgAppImage,
-		descriprion: 'a powerfull app',
+		descriprion:
+			'Coin Farming Telegram Mini App powered by Telegram Bot. It allows users to auto register, manage progress, and farm coins via a user-friendly  interface.The backend processes data and tracks user activities.',
 		usedTechnologiesIcons: [
 			{
 				react: reactImage,
-				vite: viteImage,
+
 				redux: reduxImage,
 				tanstack: tanstackImage,
 				node: nodeImage,
-				express: expressImage,
+
 				mongodb: mongoImage,
 			},
 		],
+		isLive: true,
+		isGithub: false,
 	},
 
 	{
 		image: musicAppImage,
-		descriprion: 'a powerfull app',
+		descriprion:
+			'A website built on an API that provides music streaming. Users can search, play, and explore a wide range of tracks.',
 		usedTechnologiesIcons: [
 			{
 				react: reactImage,
@@ -67,10 +73,12 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				tanstack: tanstackImage,
 			},
 		],
+		isLive: false,
+		isGithub: true,
 	},
 	{
 		image: marketImage,
-		descriprion: 'a powerfull app',
+		descriprion: `Classified Ads Platform is a marketplace where users can register, post ads with photos, and browse listings.  it supports user authentication, ad management, and efficient data handling.`,
 		usedTechnologiesIcons: [
 			{
 				react: reactImage,
@@ -79,25 +87,32 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				tanstack: tanstackImage,
 			},
 		],
+		isLive: false,
+		isGithub: true,
 	},
 	{
 		image: cardGameImage,
-		descriprion: 'a powerfull app',
+		descriprion:
+			'This is a Memory Card Game built with Vanilla JavaScript. Players flip shuffled cards to find matching pairs.',
 		usedTechnologiesIcons: [
 			{
 				javaScript: jsImage,
 				css: cssImage,
 			},
 		],
+		isLive: false,
+		isGithub: true,
 	},
 	{
 		image: portfolioImage,
-		descriprion: 'a powerfull app',
+		descriprion: `This is a personal portfolio website highlighting the user's skills, projects, and experience, serving as a digital resume for potential clients or employers.`,
 		usedTechnologiesIcons: [
 			{
 				next: nextImage,
 			},
 		],
+		isLive: true,
+		isGithub: true,
 	},
 ]
 

@@ -27,6 +27,7 @@ export const BodyProvider = ({
 						position: 'relative',
 						zIndex: 1,
 						width: '100%',
+						minHeight: '100vh',
 						height: '100%',
 						display: 'flex',
 						flexDirection: 'column',

@@ -1,14 +1,14 @@
 'use client'
 
-import Image from 'next/image'
-
 import { iportfolioPageProjects } from '@/consts'
+import { GithubIcon } from '@/UI/IconComponents/GithubIcon/GithubIcon'
+import { LiveIcon } from '@/UI/IconComponents/LiveIcon/LiveIcon'
+import Image from 'next/image'
 import { FC, useState } from 'react'
 import styles from './PortfolioItem.module.scss'
 
 interface iPortfolioItem extends iportfolioPageProjects {
 	key?: number
-	className?: string
 }
 
 export const PortfolioItem: FC<iPortfolioItem> = ({
@@ -16,12 +16,15 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 	image,
 	descriprion,
 	usedTechnologiesIcons,
+	isGithub,
+	isLive,
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
 	const handleHover = () => {
 		setShowHoverMenu(prev => !prev)
 	}
+
 	return (
 		<div
 			key={key}
@@ -37,6 +40,14 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 				}
 			>
 				<Image src={image} alt='projectImage' />
+				<div
+					className={
+						showHoverMenu ? styles.linksContainerOnHover : styles.linksContainer
+					}
+				>
+					{isGithub && <GithubIcon />}
+					{isLive && <LiveIcon />}
+				</div>
 			</div>
 			<div className={showHoverMenu ? styles.itemInfoonHover : styles.itemInfo}>
 				<p className={styles.itemDescription}>{descriprion}</p>

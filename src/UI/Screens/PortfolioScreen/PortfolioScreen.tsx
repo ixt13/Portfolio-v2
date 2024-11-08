@@ -11,6 +11,8 @@ export const PortfolioScreen = () => {
 						image={el.image}
 						descriprion={el.descriprion}
 						usedTechnologiesIcons={el.usedTechnologiesIcons}
+						isLive={el.isLive}
+						isGithub={el.isGithub}
 					/>
 				))}
 			</div>
