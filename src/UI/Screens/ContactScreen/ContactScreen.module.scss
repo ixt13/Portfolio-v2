@@ -1,0 +1,52 @@
+.contactWrapper {
+	width: 1000px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.leftSideBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.rightSideBlock {
+	height: 100%;
+	width: 100%;
+	form {
+		display: flex;
+		flex-direction: column;
+		textArea {
+			all: unset;
+			height: 120px;
+			width: 600px;
+			resize: none;
+
+			background-color: rgba(217, 217, 217, 0.2);
+			border: 2px solid #d9d9d9;
+			border-radius: 8px;
+			padding: 8px;
+			overflow-y: auto;
+			&::placeholder {
+				color: rgb(227, 227, 227);
+			}
+		}
+	}
+}
+
+.contactItem {
+	height: 60px;
+	width: 360px;
+	background-color: rgba(217, 217, 217, 0.2);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.icon {
+	height: 26px;
+	width: 26px;
+}
