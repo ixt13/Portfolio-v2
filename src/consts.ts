@@ -37,8 +37,8 @@ export interface iportfolioPageProjects {
 	image: StaticImport
 	descriprion: string
 	usedTechnologiesIcons: iUsedTechnologiesIcons[]
-	isLive: boolean
-	isGithub: boolean
+	liveLink: string
+	githubLink: string
 }
 
 export const portfolioPageProjects: iportfolioPageProjects[] = [
@@ -57,8 +57,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				mongodb: mongoImage,
 			},
 		],
-		isLive: true,
-		isGithub: false,
+		liveLink: 'https://t.me/Coinalize_bot',
+		githubLink: '',
 	},
 
 	{
@@ -73,8 +73,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				tanstack: tanstackImage,
 			},
 		],
-		isLive: false,
-		isGithub: true,
+		liveLink: '',
+		githubLink: 'https://github.com/ixt13/musicPage',
 	},
 	{
 		image: marketImage,
@@ -89,8 +89,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				mongodb: mongoImage,
 			},
 		],
-		isLive: false,
-		isGithub: true,
+		liveLink: '',
+		githubLink: 'https://github.com/ixt13/market',
 	},
 	{
 		image: cardGameImage,
@@ -102,8 +102,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				css: cssImage,
 			},
 		],
-		isLive: false,
-		isGithub: true,
+		liveLink: '',
+		githubLink: 'https://github.com/ixt13/CardGame',
 	},
 	{
 		image: portfolioImage,
@@ -113,8 +113,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 				next: nextImage,
 			},
 		],
-		isLive: true,
-		isGithub: true,
+		liveLink: 'https://portfolio-v2-henna-one.vercel.app/',
+		githubLink: 'https://github.com/ixt13/Portfolio-v2',
 	},
 ]
 

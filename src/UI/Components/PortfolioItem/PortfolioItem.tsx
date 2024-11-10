@@ -4,6 +4,7 @@ import { iportfolioPageProjects } from '@/consts'
 import { GithubIcon } from '@/UI/IconComponents/GithubIcon/GithubIcon'
 import { LiveIcon } from '@/UI/IconComponents/LiveIcon/LiveIcon'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FC, useState } from 'react'
 import styles from './PortfolioItem.module.scss'
 
@@ -16,8 +17,8 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 	image,
 	descriprion,
 	usedTechnologiesIcons,
-	isGithub,
-	isLive,
+	githubLink,
+	liveLink,
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
@@ -45,8 +46,16 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 						showHoverMenu ? styles.linksContainerOnHover : styles.linksContainer
 					}
 				>
-					{isGithub && <GithubIcon />}
-					{isLive && <LiveIcon />}
+					{githubLink && (
+						<Link href={githubLink} target='_blank'>
+							<GithubIcon />
+						</Link>
+					)}
+					{liveLink && (
+						<Link href={liveLink} target='_blank'>
+							<LiveIcon />
+						</Link>
+					)}
 				</div>
 			</div>
 			<div className={showHoverMenu ? styles.itemInfoonHover : styles.itemInfo}>
