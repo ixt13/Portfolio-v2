@@ -5,6 +5,7 @@ import facebookIcon from '@/assets/images/facebookIcon.png'
 import linkedInIcon from '@/assets/images/linkedInIcon.png'
 import telegramIcon from '@/assets/images/telegramIcon.png'
 import Image from 'next/image'
+import Link from 'next/link'
 export const ContactScreen = () => {
 	return (
 		<div className={styles.contactWrapper}>
@@ -13,7 +14,7 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div>
 							<p>You can Email me Here</p>
-							<p>octavian@gmail.com</p>
+							<a href='mailto:octavian@gmail.com'>octavian@gmail.com</a>
 						</div>
 
 						<SquareIcon className={styles.icon} />
@@ -22,7 +23,7 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div>
 							<p>Give Me a Call on</p>
-							<p>+88 888 888</p>
+							<a href='tel:+37368855569'>+88 888 888</a>
 						</div>
 
 						<SquareIcon className={styles.icon} />
@@ -30,8 +31,8 @@ export const ContactScreen = () => {
 
 					<div className={styles.contactItem}>
 						<div>
-							<p>You can Email me Here</p>
-							<p>octavian@gmail.com</p>
+							<p>Location</p>
+							<a>Chisinau , RM</a>
 						</div>
 
 						<SquareIcon className={styles.icon} />
@@ -41,21 +42,27 @@ export const ContactScreen = () => {
 				<div className={styles.socialItems}>
 					<p>My social profiles</p>
 					<div className={styles.socialIcons}>
-						<Image
-							className={styles.image}
-							src={linkedInIcon}
-							alt='socialIcon'
-						/>
-						<Image
-							className={styles.image}
-							src={facebookIcon}
-							alt='socialIcon'
-						/>
-						<Image
-							className={styles.image}
-							src={telegramIcon}
-							alt='socialIcon'
-						/>
+						<Link href={''} target='_blank'>
+							<Image
+								className={styles.image}
+								src={linkedInIcon}
+								alt='socialIcon'
+							/>
+						</Link>
+						<Link href={''} target='_blank'>
+							<Image
+								className={styles.image}
+								src={facebookIcon}
+								alt='socialIcon'
+							/>
+						</Link>
+						<Link href={'https://t.me/ixt13'} target='_blank'>
+							<Image
+								className={styles.image}
+								src={telegramIcon}
+								alt='socialIcon'
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>

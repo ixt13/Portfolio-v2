@@ -17,11 +17,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 70px;
+
 		textArea {
 			all: unset;
 
 			height: 176px;
-			width: 600px;
+			width: auto;
 			resize: none;
 
 			border: 1px solid currentColor;
@@ -45,11 +46,13 @@
 				color: currentColor;
 			}
 		}
+
 		button {
 			margin-top: -40px;
 		}
 	}
 }
+
 .inputGroup {
 	display: flex;
 	flex-direction: row;
@@ -64,7 +67,7 @@
 
 .contactItem {
 	height: 60px;
-	width: 360px;
+	width: 320px;
 	background-color: rgba(217, 217, 217, 0.2);
 	border-radius: 8px;
 	display: flex;
@@ -76,17 +79,20 @@
 .icon {
 	height: 36px;
 	width: 36px;
+	stroke-width: 1px;
 }
 
 .contactItems {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 22px;
 }
 
 .image {
-	padding: 8px;
+	height: 100%;
+	width: 100%;
 }
+
 .socialIcons {
 	background-color: rgba(217, 217, 217, 0.2);
 	border-radius: 8px;
@@ -94,6 +100,14 @@
 	align-items: center;
 	justify-content: center;
 	width: max-content;
+	height: 60px;
+	transition: all 0.2 ease;
+	gap: 12px;
+	padding: 12px;
+	a {
+		height: 40px;
+		width: 40px;
+	}
 }
 
 .socialItems {
