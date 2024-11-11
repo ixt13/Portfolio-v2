@@ -2,11 +2,17 @@ import { FC } from 'react'
 
 interface iSquareIcon {
 	className: string
+	onClick?: () => void
 }
 
-export const SquareIcon: FC<iSquareIcon> = ({ className }) => {
+export const SquareIcon: FC<iSquareIcon> = ({ className, onClick }) => {
 	return (
-		<svg viewBox='0 0 24 24' fill='none' className={className}>
+		<svg
+			onClick={onClick}
+			viewBox='0 0 24 24'
+			fill='none'
+			className={className}
+		>
 			<path
 				d='M10.5 9L13.5 12L10.5 15'
 				stroke='currentColor'

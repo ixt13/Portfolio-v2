@@ -1,12 +1,18 @@
+'use client'
+
 import { SquareIcon } from '@/UI/IconComponents/SquareIcon/SquareIcon'
 import styles from './ContactScreen.module.scss'
 
 import facebookIcon from '@/assets/images/facebookIcon.png'
 import linkedInIcon from '@/assets/images/linkedInIcon.png'
 import telegramIcon from '@/assets/images/telegramIcon.png'
+import { LocationGoogleMaps } from '@/UI/Modals/LocationGoogleMaps/LocationGoogleMaps'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 export const ContactScreen = () => {
+	const [isShowModalMap, setIsShowModalMap] = useState<boolean>(false)
+
 	return (
 		<div className={styles.contactWrapper}>
 			<div className={styles.leftSideBlock}>
@@ -32,10 +38,15 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div>
 							<p>Location</p>
-							<a>Chisinau , RM</a>
+							<p>Chisinau , RM</p>
 						</div>
 
-						<SquareIcon className={styles.icon} />
+						<SquareIcon
+							onClick={() => {
+								setIsShowModalMap(true)
+							}}
+							className={styles.icon}
+						/>
 					</div>
 				</div>
 
@@ -80,7 +91,14 @@ export const ContactScreen = () => {
 					<textarea placeholder='Your Message here...' name='' id=''></textarea>
 					<button>Send</button>
 				</form>
-			</div>
+			</div>{' '}
+			{isShowModalMap && (
+				<LocationGoogleMaps
+					onClick={() => {
+						setIsShowModalMap(false)
+					}}
+				/>
+			)}
 		</div>
 	)
 }
