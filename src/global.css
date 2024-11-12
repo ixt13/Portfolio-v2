@@ -2,9 +2,11 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	scrollbar-gutter: stable;
 }
 
+body {
+	overflow-x: hidden;
+}
 button,
 a {
 	all: unset;
