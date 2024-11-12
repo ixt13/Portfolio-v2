@@ -65,11 +65,10 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 						<div className={styles.itemUsedTechnologies} key={index}>
 							{Object.entries(el).map(([techName, techIcon]) => (
 								<Image
+									className={styles.techIcon}
 									key={techName}
 									src={techIcon}
 									alt={`${techName}Icon`}
-									height={34}
-									width={techName === 'css' || techName === 'mongodb' ? 24 : 34}
 								/>
 							))}
 						</div>
