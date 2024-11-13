@@ -1,8 +1,8 @@
 .navButton {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 300;
-	height: 36px;
-	width: 160px;
+	height: 32px;
+	width: 140px;
 	background-color: rgba(255, 255, 255, 0.2);
 	text-decoration: none;
 	outline: none;
@@ -20,5 +20,5 @@
 }
 .active {
 	background-color: transparent;
-	border: 1px solid rgba(255, 255, 255, 0.7);
+	outline: 1px solid rgba(255, 255, 255, 0.7);
 }

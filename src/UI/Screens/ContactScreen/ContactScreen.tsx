@@ -12,7 +12,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 export const ContactScreen = () => {
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
-
+	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
 	return (
 		<div className={styles.contactWrapper}>
 			<div className={styles.leftSideBlock}>
@@ -84,7 +84,7 @@ export const ContactScreen = () => {
 				</div>
 			</div>
 			<div className={styles.rightSideBlock}>
-				<p>Send me a message</p>
+				<p className={styles.rightSideBlockTitle}>Send me a message</p>
 				<form
 					onSubmit={e => {
 						e.preventDefault()
@@ -130,8 +130,24 @@ export const ContactScreen = () => {
 						id='message'
 						name='message'
 					></textarea>
-					<button type='submit'>
-						<p>Send</p>
+					<button
+						type='submit'
+						onMouseEnter={() => {
+							setOnButtonHover(true)
+						}}
+						onMouseLeave={() => {
+							setOnButtonHover(false)
+						}}
+					>
+						<p
+							className={`${styles.buttonTextContent} ${
+								onButtonHover
+									? styles.buttonTextContentVisible
+									: styles.buttonTextContentHidden
+							} `}
+						>
+							Send
+						</p>
 						<SquareIcon className={styles.buttonIcon}></SquareIcon>
 					</button>
 				</form>

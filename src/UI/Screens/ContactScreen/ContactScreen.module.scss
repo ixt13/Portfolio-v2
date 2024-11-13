@@ -4,6 +4,7 @@
 	align-items: flex-start;
 	justify-content: center;
 	gap: 40px;
+	font-weight: 300;
 }
 
 .rightSideBlock {
@@ -13,12 +14,6 @@
 	width: 100%;
 	padding: 32px 36px 36px 36px;
 
-	p {
-		text-align: center;
-		padding-bottom: 40px;
-		font-size: 20px;
-	}
-
 	form {
 		display: flex;
 		flex-direction: column;
@@ -26,7 +21,7 @@
 
 		textArea {
 			all: unset;
-			font-size: 14px;
+
 			height: 120px;
 			width: auto;
 			resize: none;
@@ -44,7 +39,6 @@
 		}
 
 		input {
-			font-size: 14px;
 			border-bottom: 1px solid currentColor;
 			width: 100%;
 			padding: 4px 8px 4px 8px;
@@ -64,27 +58,13 @@
 		}
 	}
 	button {
-		border: 1px solid currentColor;
-		border-radius: 8px;
-		padding: 6px;
 		margin-top: -40px;
 		display: flex;
-		flex-direction: row;
-		height: 36px;
-		width: min-content;
-		gap: 14px;
-		justify-content: space-between;
+		height: 40px;
+
 		transition: all 0.2s ease;
-		p {
-			font-size: 16px;
-			padding-bottom: 0px;
-			height: 100%;
-			display: flex;
-			align-items: center;
-		}
-		&:hover {
-			gap: 34px;
-		}
+
+		width: min-content;
 	}
 }
 
@@ -101,7 +81,6 @@
 }
 
 .contactItem {
-	font-size: 16px;
 	font-weight: 300;
 	height: 54px;
 	width: 300px;
@@ -113,17 +92,9 @@
 	padding: 10px 24px 10px 10px;
 
 	a {
-		font-size: 14px;
 		height: 32px;
 		width: 32px;
 		cursor: pointer;
-	}
-}
-.contactItemTextContent {
-	font-size: 16px;
-
-	p:nth-of-type(2) {
-		font-size: 14px;
 	}
 }
 
@@ -178,14 +149,36 @@
 	align-items: flex-start;
 
 	gap: 10px;
-	p:nth-of-type(1) {
-		font-size: 16px;
-	}
 }
 
+.rightSideBlockTitle {
+	text-align: center;
+	font-size: 20px;
+	padding-bottom: 34px;
+}
+
+.buttonTextContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
+}
 .buttonIcon {
-	width: auto;
-	height: 100%;
-	padding: 2px;
+	min-height: 40px;
+	min-width: 40px;
+	max-width: 40px;
+	max-height: 40px;
 	stroke-width: 1px;
+	transition: all 0.4s ease;
+}
+
+.buttonTextContentHidden {
+	width: 0%;
+	overflow: hidden;
+}
+
+.buttonTextContentVisible {
+	width: 100%;
+	overflow: hidden;
+	padding-right: 8px;
 }

@@ -1,4 +1,6 @@
+import importedImage from '@/assets/images/TelegramImage.jpg'
 import { abotMeTextContent } from '@/consts'
+import Image from 'next/image'
 import { Carousel } from '../../Components/Carousel/Carousel'
 import styles from './HomeScreen.module.scss'
 export const HomeScreen = () => {
@@ -9,9 +11,7 @@ export const HomeScreen = () => {
 					<h3>About Me</h3>
 					<p className={styles.aboutMeText}>{abotMeTextContent}</p>
 				</div>
-				<div
-					style={{ width: '280px', height: '400px', border: '2px solid black' }}
-				></div>
+				<Image src={importedImage} height={380} alt='image'></Image>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
 				<Carousel reverseDirection={true} />

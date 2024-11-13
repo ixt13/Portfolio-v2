@@ -214,8 +214,8 @@ export const studies: iTextContent = {
 		},
 		{
 			paragraph:
-				'Web Development in Online School - SkyPro, 2022-2023 (12 month)',
-			description: 'Technologies - HTML, CSS, JavaScript, React.js',
+				'Web Development in Online School - SkyPro, 2022-2023 (12 month) - HTML, CSS, JavaScript, React.js',
+			description: '',
 		},
 	],
 }
