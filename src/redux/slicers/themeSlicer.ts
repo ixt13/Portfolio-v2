@@ -16,7 +16,7 @@ export const themeSlice = createSlice({
 			state.currentTheme = 'dark'
 		},
 		setThemeLight: state => {
-			state.backgroundColor = 'darkseagreen'
+			state.backgroundColor = '#8fbc9b'
 			state.color = '#353535'
 			state.currentTheme = 'light'
 		},
