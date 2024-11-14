@@ -1,18 +1,19 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
-
 export async function GET() {
+	console.log('EMAIL_USER:', process.env.MAILER_EMAIL)
+	console.log('EMAIL_PASS:', process.env.MAILER_PASS)
 	try {
 		const transporter = nodemailer.createTransport({
 			service: 'gmail',
 			auth: {
-				user: 'octav9x@gmail.com',
-				pass: ' ',
+				user: process.env.MAILER_EMAIL,
+				pass: process.env.MAILER_PASS,
 			},
 		})
 
 		const mailOptions = {
-			from: 'octav9x@gmail.com',
+			from: process.env.MAILER_EMAIL,
 			to: 'ixt13@yahoo.com',
 			subject: 'Sending Email using Node.js',
 			text: 'That was easy!',
