@@ -17,7 +17,7 @@ export const ContactScreen = () => {
 
 	const getTestfn = async () => {
 		try {
-			const response = await axios.get('/api/send')
+			const response = await axios.get('api/sendMessage')
 			console.log(response)
 		} catch (error) {
 			console.error('Error:', error)
