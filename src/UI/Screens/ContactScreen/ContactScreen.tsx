@@ -15,15 +15,43 @@ export const ContactScreen = () => {
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
 	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
 
+	const [firstName, setFirstName] = useState<string>()
+	const [lastName, setLastName] = useState<string>()
+	const [email, setEmail] = useState<string>()
+	const [phoneNumber, setPhoneNumber] = useState<string>()
+	const [message, setMessage] = useState<string>()
+	const [data, setData] = useState<string>('')
+
+	const [isLoading, setLoading] = useState<boolean>()
+
+	const [isError, setError] = useState<boolean>()
+
 	const getTestfn = async () => {
+		setLoading(true)
 		try {
-			const response = await axios.get('api/sendMessage')
-			console.log(response)
+			const response = await axios.post('api/sendMessage', {
+				firstName: firstName,
+				lastName: lastName,
+				email: email,
+				phoneNumber: phoneNumber,
+				message: message,
+			})
+			setData(response.data)
+			setMessage('')
+			setTimeout(() => {
+				setData('')
+			}, 3000)
+			console.log(response.data)
 		} catch (error) {
-			console.error('Error:', error)
-			return error
+			setError(!!error)
+			setTimeout(() => {
+				setError(false)
+			}, 3000)
+		} finally {
+			setLoading(false)
 		}
 	}
+
 	return (
 		<div className={styles.contactWrapper}>
 			<div className={styles.leftSideBlock}>
@@ -99,6 +127,8 @@ export const ContactScreen = () => {
 				<form
 					onSubmit={e => {
 						e.preventDefault()
+
+						getTestfn()
 					}}
 					method='post'
 				>
@@ -109,6 +139,9 @@ export const ContactScreen = () => {
 							id='firstName'
 							name='firstName'
 							required
+							onChange={e => {
+								setFirstName(e.target.value)
+							}}
 						/>
 
 						<input
@@ -117,6 +150,9 @@ export const ContactScreen = () => {
 							id='lastName'
 							name='lastName'
 							required
+							onChange={e => {
+								setLastName(e.target.value)
+							}}
 						/>
 					</div>
 					<div className={styles.inputGroup}>
@@ -126,6 +162,9 @@ export const ContactScreen = () => {
 							id='email'
 							name='email'
 							required
+							onChange={e => {
+								setEmail(e.target.value)
+							}}
 						/>
 
 						<input
@@ -133,13 +172,21 @@ export const ContactScreen = () => {
 							placeholder='Phone Number'
 							id='phone'
 							name='phone'
+							onChange={e => {
+								setPhoneNumber(e.target.value)
+							}}
 						/>
 					</div>
 
 					<textarea
+						value={message}
+						onChange={e => {
+							setMessage(e.target.value)
+						}}
 						placeholder='Your Message here...'
 						id='message'
 						name='message'
+						required
 					></textarea>
 					<button
 						type='submit'
@@ -148,9 +195,6 @@ export const ContactScreen = () => {
 						}}
 						onMouseLeave={() => {
 							setOnButtonHover(false)
-						}}
-						onClick={() => {
-							getTestfn()
 						}}
 					>
 						<p
@@ -162,7 +206,14 @@ export const ContactScreen = () => {
 						>
 							Send
 						</p>
-						<SquareIcon className={styles.buttonIcon}></SquareIcon>
+
+						{isLoading ? (
+							<div className={styles.loader}></div>
+						) : data ? (
+							<p className={styles.loadingText}>OK</p>
+						) : (
+							<SquareIcon className={styles.buttonIcon} />
+						)}
 					</button>
 				</form>
 			</div>
