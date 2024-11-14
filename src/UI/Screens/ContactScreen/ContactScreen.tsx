@@ -7,12 +7,23 @@ import facebookIcon from '@/assets/images/facebookIcon.png'
 import linkedInIcon from '@/assets/images/linkedInIcon.png'
 import telegramIcon from '@/assets/images/telegramIcon.png'
 import { LocationGoogleMaps } from '@/UI/Modals/LocationGoogleMaps/LocationGoogleMaps'
+import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 export const ContactScreen = () => {
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
 	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
+
+	const getTestfn = async () => {
+		try {
+			const response = await axios.get('/api/send')
+			console.log(response)
+		} catch (error) {
+			console.error('Error:', error)
+			return error
+		}
+	}
 	return (
 		<div className={styles.contactWrapper}>
 			<div className={styles.leftSideBlock}>
@@ -137,6 +148,9 @@ export const ContactScreen = () => {
 						}}
 						onMouseLeave={() => {
 							setOnButtonHover(false)
+						}}
+						onClick={() => {
+							getTestfn()
 						}}
 					>
 						<p
