@@ -24,8 +24,6 @@ export const ContactScreen = () => {
 
 	const [isLoading, setLoading] = useState<boolean>()
 
-	const [isError, setError] = useState<boolean>()
-
 	const getTestfn = async () => {
 		setLoading(true)
 		try {
@@ -43,10 +41,7 @@ export const ContactScreen = () => {
 			}, 3000)
 			console.log(response.data)
 		} catch (error) {
-			setError(!!error)
-			setTimeout(() => {
-				setError(false)
-			}, 3000)
+			console.log(error)
 		} finally {
 			setLoading(false)
 		}
