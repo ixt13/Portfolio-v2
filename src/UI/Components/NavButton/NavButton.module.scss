@@ -17,6 +17,12 @@
 		font-size: 22px;
 	}
 
+	@media screen and (max-width: 840px) {
+		height: 26px;
+		width: 74px;
+		font-size: 14px;
+	}
+
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 	}

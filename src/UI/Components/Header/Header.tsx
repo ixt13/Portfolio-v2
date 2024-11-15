@@ -21,6 +21,7 @@ export const Header = () => {
 					<NavButton href={'/contacts'} textContent={'Contacts'} />
 				</nav>
 				<button
+					className={styles.themeButton}
 					onClick={() => {
 						if (currentTheme === 'dark') {
 							dispatch(setThemeLight())

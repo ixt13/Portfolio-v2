@@ -13,6 +13,12 @@
 	justify-content: center;
 	align-items: center;
 	gap: 34px;
+	@media screen and (max-width: 1024px) {
+		gap: 20px;
+	}
+	@media screen and (max-width: 840px) {
+		gap: 12px;
+	}
 }
 .line {
 	border-top: 2px solid rgba(255, 255, 255, 0.5);
@@ -20,22 +26,32 @@
 	@media screen and (min-width: 1440px) {
 		width: 1200px;
 	}
+	@media screen and (max-width: 1024px) {
+		width: 800px;
+	}
+	@media screen and (max-width: 840px) {
+		width: 440px;
+	}
 }
 .navGroup {
 	position: relative;
 	display: flex;
 	align-items: center;
+}
 
-	button {
-		position: absolute;
-		right: -100px;
-		height: 32px;
-		width: 32px;
-		cursor: pointer;
-		transition: all 0.1s linear;
-		transform: rotate(20deg);
-		&:hover {
-			transform: scale(1.2) rotate(0deg);
-		}
+.themeButton {
+	position: absolute;
+	right: -100px;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	transition: all 0.1s linear;
+	transform: rotate(20deg);
+	&:hover {
+		transform: scale(1.2) rotate(0deg);
+	}
+
+	@media screen and (max-width: 840px) {
+		right: -44px;
 	}
 }
