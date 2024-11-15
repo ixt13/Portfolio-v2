@@ -1,11 +1,15 @@
 .homeWrapper {
 	height: 100%;
+	width: 1000px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	gap: 20px;
 	padding: 20px;
+	@media screen and (min-width: 1440px) {
+		width: 1200px;
+	}
 }
 
 .aboutMeTextBlock {
@@ -19,11 +23,17 @@
 	h3 {
 		font-size: 28px;
 		font-weight: 300;
+		@media screen and (min-width: 1440px) {
+			font-size: 34px;
+		}
 	}
 }
 .aboutMeText {
 	font-weight: 200;
 	white-space: pre-line;
+	@media screen and (min-width: 1440px) {
+		font-size: 19px;
+	}
 }
 .userContent {
 	width: 100%;
@@ -35,9 +45,21 @@
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 24px;
 	border-radius: 8px;
+	@media screen and (min-width: 1440px) {
+		padding: 28px;
+	}
 }
 .carousel {
 	width: 100%;
 
 	overflow: hidden;
+}
+
+.image {
+	height: 340px;
+	width: auto;
+
+	@media screen and (min-width: 1440px) {
+		height: 420px;
+	}
 }

@@ -11,9 +11,16 @@ export const HomeScreen = () => {
 					<h3>About Me</h3>
 					<p className={styles.aboutMeText}>{abotMeTextContent}</p>
 				</div>
-				<Image src={importedImage} height={380} alt='image'></Image>
+				<Image src={importedImage} className={styles.image} alt='image'></Image>
 			</div>
-			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					gap: '10px',
+					width: '100%',
+				}}
+			>
 				<Carousel reverseDirection={true} />
 				<Carousel reverseDirection={false} />
 			</div>
