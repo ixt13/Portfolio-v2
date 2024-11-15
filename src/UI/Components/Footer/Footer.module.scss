@@ -11,5 +11,8 @@
 }
 .line {
 	border-top: 2px solid rgba(255, 255, 255, 0.5);
-	width: 1200px;
+	width: 1000px;
+	@media screen and (min-width: 1440px) {
+		width: 1200px;
+	}
 }

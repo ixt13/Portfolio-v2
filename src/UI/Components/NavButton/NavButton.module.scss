@@ -11,6 +11,12 @@
 	justify-content: center;
 	align-items: center;
 
+	@media screen and (min-width: 1440px) {
+		height: 42px;
+		width: 168px;
+		font-size: 22px;
+	}
+
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 	}
