@@ -25,7 +25,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+
 	gap: 20px;
 
 	h3 {
@@ -33,6 +33,12 @@
 		font-weight: 300;
 		@media screen and (min-width: 1440px) {
 			font-size: 34px;
+		}
+		@media screen and (max-width: 650px) {
+			font-size: 24px;
+		}
+		@media screen and (max-width: 310px) {
+			font-size: 16px;
 		}
 	}
 }
@@ -44,6 +50,7 @@
 	}
 }
 .userContent {
+	position: relative;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -73,4 +80,39 @@
 	@media screen and (max-width: 650px) {
 		display: none;
 	}
+}
+
+.imageMobile {
+	display: none;
+	@media screen and (max-width: 650px) {
+		display: block;
+		object-fit: cover;
+		min-width: 7rem;
+		min-width: 7rem;
+		max-height: 7rem;
+		max-width: 7rem;
+		border-radius: 50%;
+		top: 0px;
+		right: 0px;
+	}
+
+	@media screen and (max-width: 440px) {
+		display: block;
+		object-fit: cover;
+		min-width: 6rem;
+		min-width: 6rem;
+		max-height: 6rem;
+		max-width: 6rem;
+		border-radius: 50%;
+		top: 0px;
+		right: 0px;
+	}
+}
+
+.userContentHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 14px;
 }

@@ -14,4 +14,19 @@
 	p {
 		font-weight: 250;
 	}
+
+	@media screen and (max-width: 440px) {
+		padding-left: 6px;
+		padding-right: 6px;
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+.image {
+	height: 24px;
+	@media screen and (max-width: 440px) {
+		height: 18px;
+	}
 }

@@ -8,7 +8,15 @@ export const HomeScreen = () => {
 		<main className={styles.homeWrapper}>
 			<div className={styles.userContent}>
 				<div className={styles.aboutMeTextBlock}>
-					<h3>About Me</h3>
+					<div className={styles.userContentHeader}>
+						<h3>About Me</h3>
+						<Image
+							src={importedImage}
+							className={styles.imageMobile}
+							alt='image'
+						/>
+					</div>
+
 					<p className={styles.aboutMeText}>{abotMeTextContent}</p>
 				</div>
 				<Image src={importedImage} className={styles.image} alt='image'></Image>

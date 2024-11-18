@@ -7,7 +7,12 @@ export const TechItem: FC<iTechnologies> = ({ name, image }) => {
 	return (
 		<div className={styles.item}>
 			<p>{name}</p>
-			<Image src={image} height={24} style={{ width: 'auto' }} alt={name} />
+			<Image
+				src={image}
+				className={styles.image}
+				style={{ width: 'auto' }}
+				alt={name}
+			/>
 		</div>
 	)
 }
