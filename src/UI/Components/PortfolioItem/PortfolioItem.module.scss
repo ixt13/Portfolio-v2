@@ -20,8 +20,15 @@
 		height: 280px;
 	}
 	@media screen and (max-width: 840px) {
-		height: 180px;
-		width: 100wv;
+		height: 260px;
+		grid-column: span 6;
+		grid-row: span 4;
+	}
+	@media screen and (max-width: 600px) {
+		width: 80vw;
+		height: 280px;
+		grid-column: span 12;
+		grid-row: span 2;
 	}
 }
 
