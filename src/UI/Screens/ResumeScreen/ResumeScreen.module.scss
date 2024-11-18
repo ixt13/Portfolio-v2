@@ -1,6 +1,6 @@
 .mainContent {
 	width: 1000px;
-	padding: 16px;
+	padding: 20px;
 
 	font-weight: 200;
 	display: grid;
@@ -12,7 +12,9 @@
 	}
 	@media screen and (min-width: 1920px) {
 		width: 1200px;
-
+		h4 {
+			font-size: 24px;
+		}
 		li {
 			font-size: 19px;
 		}
@@ -20,11 +22,9 @@
 			font-size: 19px;
 		}
 	}
-
-	@media screen and (max-width: 1920px) {
+	@media screen and (max-width: 1024px) {
 		width: 800px;
 	}
-
 	@media screen and (max-width: 840px) {
 		width: 100vw;
 	}
