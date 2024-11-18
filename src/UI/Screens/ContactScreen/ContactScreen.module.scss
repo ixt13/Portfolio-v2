@@ -6,6 +6,18 @@
 	gap: 40px;
 	font-weight: 300;
 	padding: 20px;
+	@media screen and (min-width: 1920px) {
+		width: 1200px;
+	}
+	@media screen and (max-width: 1024px) {
+		width: 800px;
+	}
+	@media screen and (max-width: 840px) {
+		flex-direction: column-reverse;
+		width: 100vw;
+	}
+	@media screen and (max-width: 600px) {
+	}
 }
 
 .rightSideBlock {
@@ -33,6 +45,10 @@
 			overflow-y: auto;
 			overflow-x: hidden;
 			word-wrap: break-word;
+			@media screen and (min-width: 1920px) {
+				height: 240px;
+			}
+
 			&::placeholder {
 				opacity: 76%;
 				color: currentColor;
@@ -43,7 +59,9 @@
 			border-bottom: 1px solid currentColor;
 			width: 100%;
 			padding: 4px 8px 4px 8px;
-
+			@media screen and (max-width: 600px) {
+				width: auto;
+			}
 			&::placeholder {
 				opacity: 76%;
 				color: currentColor;
@@ -79,12 +97,20 @@
 	display: flex;
 	flex-direction: row;
 	gap: 80px;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		width: auto;
+	}
 }
 
 .leftSideBlock {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+
+	@media screen and (max-width: 840px) {
+		width: 100%;
+	}
 }
 
 .contactItem {
@@ -102,6 +128,18 @@
 		height: 32px;
 		width: 32px;
 		cursor: pointer;
+	}
+	@media screen and (min-width: 1920px) {
+		height: 64px;
+		width: 340px;
+	}
+	@media screen and (max-width: 1024px) {
+		height: 60px;
+		width: 280px;
+	}
+	@media screen and (max-width: 840px) {
+	}
+	@media screen and (max-width: 600px) {
 	}
 }
 
@@ -147,6 +185,10 @@
 		&:hover {
 			transform: translateY(-6px);
 		}
+	}
+	@media screen and (min-width: 1920px) {
+		height: 64px;
+		width: max-content;
 	}
 }
 
