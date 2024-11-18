@@ -151,3 +151,14 @@
 	width: auto;
 	height: 28px;
 }
+.backIcon {
+	visibility: hidden;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 12px;
+	@media screen and (max-width: 840px) {
+		visibility: visible;
+	}
+}

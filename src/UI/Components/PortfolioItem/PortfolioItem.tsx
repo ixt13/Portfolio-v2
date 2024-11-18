@@ -1,6 +1,7 @@
 'use client'
 
 import { iportfolioPageProjects } from '@/consts'
+import { BackIcon } from '@/UI/IconComponents/BackIcon/BackIcon'
 import { GithubIcon } from '@/UI/IconComponents/GithubIcon/GithubIcon'
 import { LiveIcon } from '@/UI/IconComponents/LiveIcon/LiveIcon'
 import Image from 'next/image'
@@ -22,17 +23,15 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
-	const handleHover = () => {
-		setShowHoverMenu(prev => !prev)
-	}
-
 	return (
 		<div
 			key={key}
 			onMouseEnter={() => {
-				handleHover()
+				setShowHoverMenu(true)
 			}}
-			onMouseLeave={handleHover}
+			onMouseLeave={() => {
+				setShowHoverMenu(false)
+			}}
 			className={styles.item}
 		>
 			<div
@@ -46,6 +45,12 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 						showHoverMenu ? styles.linksContainerOnHover : styles.linksContainer
 					}
 				>
+					<BackIcon
+						onClick={() => {
+							setShowHoverMenu(false)
+						}}
+						className={styles.backIcon}
+					/>
 					{githubLink && (
 						<Link href={githubLink} target='_blank'>
 							<GithubIcon />
