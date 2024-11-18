@@ -18,6 +18,9 @@
 	}
 	@media screen and (max-width: 1024px) {
 		height: 280px;
+		p {
+			font-size: 14px;
+		}
 	}
 	@media screen and (max-width: 840px) {
 		height: 260px;
@@ -97,9 +100,13 @@
 	padding-bottom: 8px;
 }
 .itemDescription {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	padding: 4px;
+
+	@media screen and (min-width: 1920px) {
+		font-size: 19px;
+	}
 }
 
 .linksContainer {
