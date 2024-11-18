@@ -7,7 +7,7 @@
 	align-items: center;
 	gap: 20px;
 	padding: 20px;
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		width: 1200px;
 	}
 
@@ -31,7 +31,7 @@
 	h3 {
 		font-size: 28px;
 		font-weight: 300;
-		@media screen and (min-width: 1440px) {
+		@media screen and (min-width: 1920px) {
 			font-size: 34px;
 		}
 		@media screen and (max-width: 650px) {
@@ -45,7 +45,7 @@
 .aboutMeText {
 	font-weight: 200;
 	white-space: pre-line;
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		font-size: 19px;
 	}
 }
@@ -60,7 +60,7 @@
 	background-color: rgba(217, 217, 217, 0.2);
 	padding: 24px;
 	border-radius: 8px;
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		padding: 28px;
 	}
 }
@@ -74,7 +74,7 @@
 	height: 340px;
 	width: auto;
 
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		height: 420px;
 	}
 	@media screen and (max-width: 650px) {
