@@ -5,10 +5,10 @@ import styles from './ResumeScreen.module.scss'
 export const ResumeScreen = () => {
 	return (
 		<main className={styles.mainContent}>
-			<TextContentBlock textContent={studies} grid={'1 / 1 / 5 / 7'} />
-			<TextContentBlock textContent={languages} grid={'5 / 1 / 9 / 7'} />
-			<TextContentBlock textContent={workExperience} grid={'1 / 7 / 9 / 13'} />
-			<TextContentBlock textContent={devSkills} grid={'9 / 1 / 13 / 13'} />
+			<TextContentBlock textContent={studies} className={styles.div1} />
+			<TextContentBlock textContent={languages} className={styles.div2} />
+			<TextContentBlock textContent={workExperience} className={styles.div3} />
+			<TextContentBlock textContent={devSkills} className={styles.div4} />
 		</main>
 	)
 }

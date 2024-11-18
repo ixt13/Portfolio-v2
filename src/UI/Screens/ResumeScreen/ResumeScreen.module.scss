@@ -6,4 +6,57 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap: 15px;
+
+	h4 {
+		font-size: 17px;
+	}
+	@media screen and (min-width: 1440px) {
+		width: 1200px;
+
+		li {
+			font-size: 19px;
+		}
+		p {
+			font-size: 19px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		width: 800px;
+	}
+
+	@media screen and (max-width: 840px) {
+		width: 100vw;
+	}
+
+	@media screen and (max-width: 600px) {
+		width: 100vw;
+		h4 {
+			font-size: 16px;
+		}
+	}
+}
+.div1 {
+	grid-area: 1 / 1 / 5 / 7;
+	@media screen and (max-width: 600px) {
+		grid-area: 1 / 1 / 4 / 13;
+	}
+}
+.div2 {
+	grid-area: 5 / 1 / 9 / 7;
+	@media screen and (max-width: 600px) {
+		grid-area: 4 / 1 / 7 / 13;
+	}
+}
+.div3 {
+	grid-area: 1 / 7 / 9 / 13;
+	@media screen and (max-width: 600px) {
+		grid-area: 7 / 1 / 10 / 13;
+	}
+}
+.div4 {
+	grid-area: 9 / 1 / 13 / 13;
+	@media screen and (max-width: 600px) {
+		grid-area: 10 / 1 / 13 / 13;
+	}
 }

@@ -5,14 +5,13 @@ import styles from './TextContentBlock.module.scss'
 interface iTextContentBlock {
 	textContent?: iTextContent
 	className?: string
-	grid: string
 }
 export const TextContentBlock: FC<iTextContentBlock> = ({
 	textContent,
-	grid,
+	className,
 }) => {
 	return (
-		<section className={styles.section} style={{ gridArea: grid }}>
+		<section className={`${styles.section} ${className}`}>
 			<div className={styles.title}>
 				<h4>{textContent?.title}</h4>
 			</div>
