@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	height: 270px;
+	height: 320px;
 
 	grid-column: span 4;
 	grid-row: span 6;
@@ -12,6 +12,16 @@
 	border-radius: 8px;
 	* {
 		transition: all 0.25s ease;
+	}
+	@media screen and (min-width: 1920px) {
+		height: 370px;
+	}
+	@media screen and (max-width: 1024px) {
+		height: 280px;
+	}
+	@media screen and (max-width: 840px) {
+		height: 180px;
+		width: 100wv;
 	}
 }
 

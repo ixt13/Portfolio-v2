@@ -4,9 +4,11 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+
 	p {
 		font-size: 14px;
 		font-weight: 300;
+		padding: 8px;
 	}
 	@media screen and (max-width: 440px) {
 		p {
@@ -17,7 +19,7 @@
 .line {
 	border-top: 2px solid rgba(255, 255, 255, 0.5);
 	width: 1000px;
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		width: 1200px;
 	}
 	@media screen and (max-width: 1024px) {
