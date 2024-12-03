@@ -31,7 +31,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 60px;
-
+		@media screen and (max-width: 600px) {
+			gap: 24px;
+		}
 		textArea {
 			all: unset;
 
@@ -61,6 +63,7 @@
 			padding: 4px 8px 4px 8px;
 			@media screen and (max-width: 600px) {
 				width: auto;
+				padding: 4px 4px 4px 8px;
 			}
 			&::placeholder {
 				opacity: 76%;
@@ -82,7 +85,6 @@
 		}
 	}
 	button {
-		margin-top: -40px;
 		display: flex;
 		height: 40px;
 
@@ -100,6 +102,7 @@
 	@media screen and (max-width: 600px) {
 		flex-direction: column;
 		width: auto;
+		gap: 26px;
 	}
 }
 

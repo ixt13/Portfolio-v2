@@ -26,7 +26,7 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 	return (
 		<div
 			key={key}
-			onMouseEnter={() => {
+			onClick={() => {
 				setShowHoverMenu(true)
 			}}
 			onMouseLeave={() => {

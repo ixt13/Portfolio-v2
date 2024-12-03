@@ -9,7 +9,10 @@ export const BackIcon: FC<iBackIcon> = ({ className, onClick }) => {
 	return (
 		<svg
 			className={className}
-			onClick={onClick}
+			onClick={e => {
+				e.stopPropagation()
+				onClick()
+			}}
 			width='800px'
 			height='800px'
 			viewBox='0 0 24 24'
