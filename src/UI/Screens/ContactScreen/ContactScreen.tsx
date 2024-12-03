@@ -6,6 +6,7 @@ import styles from './ContactScreen.module.scss'
 import facebookIcon from '@/assets/images/facebookIcon.png'
 import linkedInIcon from '@/assets/images/linkedInIcon.png'
 import telegramIcon from '@/assets/images/telegramIcon.png'
+import { SuccesAnimatedIcon } from '@/UI/Components/SuccesAnimatedIcon/SuccesAnimatedIcon'
 import { LocationGoogleMaps } from '@/UI/Modals/LocationGoogleMaps/LocationGoogleMaps'
 import axios from 'axios'
 import Image from 'next/image'
@@ -36,6 +37,10 @@ export const ContactScreen = () => {
 			})
 			setData(response.data)
 			setMessage('')
+			setFirstName('')
+			setLastName('')
+			setEmail('')
+			setPhoneNumber('')
 			setTimeout(() => {
 				setData('')
 			}, 3000)
@@ -89,6 +94,7 @@ export const ContactScreen = () => {
 
 				<div className={styles.socialItems}>
 					<p>My social profiles</p>
+
 					<div className={styles.socialIcons}>
 						<Link
 							href={'https://www.linkedin.com/in/octavian-ceban-96383bb6/'}
@@ -137,6 +143,7 @@ export const ContactScreen = () => {
 							onChange={e => {
 								setFirstName(e.target.value)
 							}}
+							value={firstName}
 						/>
 
 						<input
@@ -148,6 +155,7 @@ export const ContactScreen = () => {
 							onChange={e => {
 								setLastName(e.target.value)
 							}}
+							value={lastName}
 						/>
 					</div>
 					<div className={styles.inputGroup}>
@@ -160,6 +168,7 @@ export const ContactScreen = () => {
 							onChange={e => {
 								setEmail(e.target.value)
 							}}
+							value={email}
 						/>
 
 						<input
@@ -170,6 +179,7 @@ export const ContactScreen = () => {
 							onChange={e => {
 								setPhoneNumber(e.target.value)
 							}}
+							value={phoneNumber}
 						/>
 					</div>
 
@@ -205,7 +215,7 @@ export const ContactScreen = () => {
 						{isLoading ? (
 							<div className={styles.loader}></div>
 						) : data ? (
-							<p className={styles.loadingText}>OK</p>
+							<SuccesAnimatedIcon className={styles.buttonIcon} />
 						) : (
 							<SquareIcon className={styles.buttonIcon} />
 						)}

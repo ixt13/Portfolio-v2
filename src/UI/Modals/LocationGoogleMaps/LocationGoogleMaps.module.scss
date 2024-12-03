@@ -9,9 +9,20 @@
 
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
 	scrollbar-gutter: stable;
 	transition: all 0.4s ease;
+	button {
+		display: flex;
+		justify-content: flex-start;
+
+		width: 70%;
+		margin: 6px;
+		@media screen and (max-width: 840px) {
+			width: 90%;
+		}
+	}
 }
 
 .modalHidden {
@@ -25,12 +36,16 @@
 
 .iFrame {
 	transition: all 0.4s ease;
-	height: 60%;
-	width: 60%;
+	height: 70%;
+	width: 70%;
 	border-radius: 8px;
 	border: none;
 	outline: none;
 	visibility: visible;
+	@media screen and (max-width: 840px) {
+		height: 90%;
+		width: 90%;
+	}
 }
 
 .iFrameHidden {
