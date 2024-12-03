@@ -11,8 +11,22 @@ import { LocationGoogleMaps } from '@/UI/Modals/LocationGoogleMaps/LocationGoogl
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 export const ContactScreen = () => {
+	const [isSmallScreen, setIsSmallScreen] = useState<boolean>()
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 600) {
+				console.log('ss')
+				setIsSmallScreen(true)
+			} else setIsSmallScreen(false)
+		}
+		handleResize()
+		window.addEventListener('resize', handleResize)
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
 	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
 
@@ -196,6 +210,13 @@ export const ContactScreen = () => {
 					<button
 						type='submit'
 						onMouseEnter={() => {
+							if (isSmallScreen) {
+								console.log('small')
+								setTimeout(() => {
+									setOnButtonHover(false)
+									console.log('tick')
+								}, 1000)
+							}
 							setOnButtonHover(true)
 						}}
 						onMouseLeave={() => {
