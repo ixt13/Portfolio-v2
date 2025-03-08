@@ -14,7 +14,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 export const ContactScreen = () => {
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
-	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
 
 	const [firstName, setFirstName] = useState<string>()
 	const [lastName, setLastName] = useState<string>()
