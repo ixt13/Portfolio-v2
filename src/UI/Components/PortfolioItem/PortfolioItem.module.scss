@@ -10,9 +10,7 @@
 	grid-row: span 6;
 
 	border-radius: 8px;
-	* {
-		transition: all 0.25s ease;
-	}
+
 	@media screen and (min-width: 1920px) {
 		height: 370px;
 	}
