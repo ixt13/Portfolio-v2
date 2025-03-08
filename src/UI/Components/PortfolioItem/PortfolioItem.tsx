@@ -23,6 +23,7 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 	const [screenWidth, setScreenWidth] = useState<number>()
+
 	useEffect(() => {
 		setScreenWidth(window.innerWidth)
 	}, [])
