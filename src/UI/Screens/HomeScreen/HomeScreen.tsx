@@ -10,11 +10,6 @@ export const HomeScreen = () => {
 				<div className={styles.aboutMeTextBlock}>
 					<div className={styles.userContentHeader}>
 						<h3>About Me</h3>
-						<Image
-							src={importedImage}
-							className={styles.imageMobile}
-							alt='image'
-						/>
 					</div>
 
 					<p className={styles.aboutMeText}>{abotMeTextContent}</p>
