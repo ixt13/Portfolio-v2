@@ -6,7 +6,7 @@ import { GithubIcon } from '@/UI/IconComponents/GithubIcon/GithubIcon'
 import { LiveIcon } from '@/UI/IconComponents/LiveIcon/LiveIcon'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from './PortfolioItem.module.scss'
 
 interface iPortfolioItem extends iportfolioPageProjects {
@@ -22,8 +22,10 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 	liveLink,
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
-
-	const screenWidth = window.innerWidth
+	const [screenWidth, setScreenWidth] = useState<number>()
+	useEffect(() => {
+		setScreenWidth(window.innerWidth)
+	}, [])
 
 	return (
 		<div
@@ -32,7 +34,7 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 				setShowHoverMenu(true)
 			}}
 			onMouseEnter={() => {
-				if (screenWidth > 840) {
+				if (screenWidth && screenWidth > 840) {
 					setShowHoverMenu(true)
 				}
 			}}
