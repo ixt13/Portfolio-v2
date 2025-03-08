@@ -5,8 +5,8 @@ export const LiveIcon = () => {
 			version='1.1'
 			id='Capa_1'
 			xmlns='http://www.w3.org/2000/svg'
-			width='800px'
-			height='800px'
+			width='100%'
+			height='100%'
 			viewBox='0 0 429.157 429.157'
 		>
 			<g id='SVGRepo_bgCarrier' strokeWidth='0' />

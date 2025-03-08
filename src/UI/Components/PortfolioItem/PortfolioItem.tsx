@@ -23,11 +23,18 @@ export const PortfolioItem: FC<iPortfolioItem> = ({
 }) => {
 	const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
+	const screenWidth = window.innerWidth
+
 	return (
 		<div
 			key={key}
 			onClick={() => {
 				setShowHoverMenu(true)
+			}}
+			onMouseEnter={() => {
+				if (screenWidth > 840) {
+					setShowHoverMenu(true)
+				}
 			}}
 			onMouseLeave={() => {
 				setShowHoverMenu(false)

@@ -11,22 +11,8 @@ import { LocationGoogleMaps } from '@/UI/Modals/LocationGoogleMaps/LocationGoogl
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 export const ContactScreen = () => {
-	const [isSmallScreen, setIsSmallScreen] = useState<boolean>()
-
-	useEffect(() => {
-		const handleResize = () => {
-			if (window.innerWidth <= 600) {
-				console.log('ss')
-				setIsSmallScreen(true)
-			} else setIsSmallScreen(false)
-		}
-		handleResize()
-		window.addEventListener('resize', handleResize)
-		return () => window.removeEventListener('resize', handleResize)
-	}, [])
-
 	const [isShowModal, setIsShowModal] = useState<boolean>(false)
 	const [onButtonHover, setOnButtonHover] = useState<boolean>(false)
 
@@ -207,38 +193,16 @@ export const ContactScreen = () => {
 						name='message'
 						required
 					></textarea>
-					<button
-						type='submit'
-						onMouseEnter={() => {
-							if (isSmallScreen) {
-								console.log('small')
-								setTimeout(() => {
-									setOnButtonHover(false)
-									console.log('tick')
-								}, 1000)
-							}
-							setOnButtonHover(true)
-						}}
-						onMouseLeave={() => {
-							setOnButtonHover(false)
-						}}
-					>
-						<p
-							className={`${styles.buttonTextContent} ${
-								onButtonHover
-									? styles.buttonTextContentVisible
-									: styles.buttonTextContentHidden
-							} `}
-						>
-							Send
-						</p>
-
+					<button type='submit'>
+						{!isLoading && !data && (
+							<p className={styles.buttonTextContent}>Send</p>
+						)}
 						{isLoading ? (
-							<div className={styles.loader}></div>
+							<div className={styles.loader} />
 						) : data ? (
 							<SuccesAnimatedIcon className={styles.buttonIcon} />
 						) : (
-							<SquareIcon className={styles.buttonIcon} />
+							''
 						)}
 					</button>
 				</form>

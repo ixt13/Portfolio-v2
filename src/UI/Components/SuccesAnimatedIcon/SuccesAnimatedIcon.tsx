@@ -9,7 +9,7 @@ export const SuccesAnimatedIcon: FC<iSuccesAnimatedIcon> = ({ className }) => {
 	return (
 		<div className={className}>
 			<div className={styles.icon}>
-				<div className={styles.iconTip}>OK</div>
+				<p className={styles.iconTip}>OK</p>
 			</div>
 		</div>
 	)

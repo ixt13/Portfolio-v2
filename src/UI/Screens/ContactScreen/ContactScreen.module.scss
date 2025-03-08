@@ -86,12 +86,17 @@
 	}
 	button {
 		display: flex;
-		height: 40px;
+		align-items: center;
+		justify-content: center;
 
 		transition: all 0.2s ease;
 
 		width: min-content;
 		gap: 8px;
+
+		width: 14%;
+		border-radius: 8px;
+		padding: 6px;
 	}
 }
 
@@ -215,22 +220,12 @@
 	justify-content: center;
 	transition: all 0.4s ease;
 }
+
 .buttonIcon {
-	min-height: 40px;
-	min-width: 40px;
-	max-width: 40px;
-	max-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	stroke-width: 1px;
-}
-
-.buttonTextContentHidden {
-	width: 0%;
-	overflow: hidden;
-}
-
-.buttonTextContentVisible {
-	width: 100%;
-	overflow: hidden;
 }
 
 .loader {
