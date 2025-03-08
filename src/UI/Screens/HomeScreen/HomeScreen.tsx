@@ -1,4 +1,4 @@
-import importedImage from '@/assets/images/TelegramImage.jpg'
+import importedImage from '@/assets/images/photo_2025-03-08_18-15-09.jpg'
 import { abotMeTextContent } from '@/consts'
 import Image from 'next/image'
 import { Carousel } from '../../Components/Carousel/Carousel'
