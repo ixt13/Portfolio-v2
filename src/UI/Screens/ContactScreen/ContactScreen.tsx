@@ -68,7 +68,7 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div className={styles.contactItemTextContent}>
 							<p>Give Me a Call on</p>
-							<p>+373 688 555 69</p>
+							<p>+49 160408 3354</p>
 						</div>
 
 						<a href='tel:+37368855569'>
@@ -79,7 +79,7 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div className={styles.contactItemTextContent}>
 							<p>My Current Location</p>
-							<p>Chisinau, Moldova</p>
+							<p>Ainring, Deutschland</p>
 						</div>
 						<a
 							onClick={() => {
