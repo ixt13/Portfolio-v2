@@ -58,9 +58,9 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div className={styles.contactItemTextContent}>
 							<p>You can Email me Here</p>
-							<p>ixt13@yahoo.com</p>
+							<p>ceban.octavian@yahoo.com</p>
 						</div>
-						<a href='mailto:ixt13@yahoo.com'>
+						<a href='mailto:ceban.octavian@yahoo.com'>
 							<SquareIcon className={styles.icon} />
 						</a>
 					</div>
