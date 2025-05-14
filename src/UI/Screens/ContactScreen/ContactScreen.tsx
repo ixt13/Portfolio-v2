@@ -79,7 +79,7 @@ export const ContactScreen = () => {
 					<div className={styles.contactItem}>
 						<div className={styles.contactItemTextContent}>
 							<p>My Current Location</p>
-							<p>Chisinaun, Moldova</p>
+							<p>Chisinau, Moldova</p>
 						</div>
 						<a
 							onClick={() => {
