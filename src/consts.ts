@@ -212,7 +212,7 @@ export const technologies: iTechnologies[] = [
 	},
 	{
 		name: 'Nest.js',
-		image: nextImage,
+		image: nestImage,
 	},
 ]
 
