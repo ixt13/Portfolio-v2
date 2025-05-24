@@ -1,4 +1,4 @@
-import alcoexpressImge from '@/assets/images/alcoexpress.png'
+import alcoexpressImge from '@/assets/images/alcoex2.png'
 import axiosImage from '@/assets/images/axios.png'
 import cardGameImage from '@/assets/images/cardGame.jpg'
 import cssImage from '@/assets/images/css.png'
