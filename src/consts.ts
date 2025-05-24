@@ -1,3 +1,4 @@
+import alcoexpressImge from '@/assets/images/alcoexpress.png'
 import axiosImage from '@/assets/images/axios.png'
 import cardGameImage from '@/assets/images/cardGame.jpg'
 import cssImage from '@/assets/images/css.png'
@@ -8,6 +9,7 @@ import marketImage from '@/assets/images/market.jpg'
 import mongoImage from '@/assets/images/mongo.png'
 import mongooseImage from '@/assets/images/mongoose.png'
 import musicAppImage from '@/assets/images/musicAppImage.jpg'
+import nestImage from '@/assets/images/nest.png'
 import nextImage from '@/assets/images/next.png'
 import nodeImage from '@/assets/images/node.png'
 import portfolioImage from '@/assets/images/portfolio.png'
@@ -31,6 +33,7 @@ interface iUsedTechnologiesIcons {
 	javaScript?: StaticImport
 	css?: StaticImport
 	next?: StaticImport
+	nest?: StaticImport
 }
 
 export interface iportfolioPageProjects {
@@ -107,7 +110,8 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 	},
 	{
 		image: portfolioImage,
-		descriprion: `This is a personal portfolio website highlighting the user's skills, projects, and experience, serving as a digital resume for potential clients or employers.`,
+		descriprion: `This is a personal portfolio website highlighting the user's skills, projects, and experience, serving as a digital resume for potential clients or employers.
+		`,
 		usedTechnologiesIcons: [
 			{
 				next: nextImage,
@@ -115,6 +119,19 @@ export const portfolioPageProjects: iportfolioPageProjects[] = [
 		],
 		liveLink: 'https://portfolio-v2-henna-one.vercel.app/',
 		githubLink: 'https://github.com/ixt13/Portfolio-v2',
+	},
+	{
+		image: alcoexpressImge,
+		descriprion: `Web application that allows users to browse and purchase products online. It features product listings, a shopping cart, and user authentication.
+		In Progress...`,
+		usedTechnologiesIcons: [
+			{
+				next: nextImage,
+				nest: nestImage,
+			},
+		],
+		liveLink: 'https://alco-express.vercel.app/',
+		githubLink: 'https://github.com/ixt13/alco-express',
 	},
 ]
 
@@ -191,6 +208,10 @@ export const technologies: iTechnologies[] = [
 	},
 	{
 		name: 'Next.js',
+		image: nextImage,
+	},
+	{
+		name: 'Nest.js',
 		image: nextImage,
 	},
 ]
